@@ -13,6 +13,7 @@
     body {
         background: url("imgs/bg.jpg") repeat;
     }
+
 </style>
 <body>
 
@@ -45,19 +46,20 @@
             </form>
 
 
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" style="margin-right: 20px">
+                <li><a href="/publish"  th:if="${session.user!=null}" style="color: white;font-size: 16px">发起</a></li>
                 <li class="dropdown">
-                    <a href="#" th:if="${session.user!=null}" th:text="${session.user.name}" style="color: white"
+                    <a href="#" th:if="${session.user!=null}" th:text="${session.user.name}" style="color: white;font-size: 16px"
                        class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">消息中心</a></li>
                         <li><a href="#">个人资料</a></li>
-                        <li><a href="#">退出登录</a></li>
+                        <li><a href="/user/logout">退出登录</a></li>
 
                     </ul>
                 </li>
-                <li><a th:if="${session.user==null}" style="color: white"
+                <li><a th:if="${session.user==null}" style="color: white;font-size: 16px"
                        href="https://github.com/login/oauth/authorize?client_id=51a6b073b4b9e92a2159&redirect_uri=http://localhost:8887/callback&scope=user&state=1">
                     登录</a></li>
             </ul>

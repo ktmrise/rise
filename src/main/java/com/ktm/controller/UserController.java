@@ -5,9 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.stereotype.Controller;
 
+import javax.servlet.http.HttpSession;
+
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
  * @author ktm
@@ -17,4 +19,10 @@ import org.springframework.stereotype.Controller;
 @RequestMapping("/user")
 public class UserController {
 
+
+    @RequestMapping("/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return "redirect:/logout";
+    }
 }

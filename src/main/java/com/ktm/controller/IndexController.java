@@ -6,6 +6,7 @@ import com.ktm.entity.User;
 import com.ktm.service.IUserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
 import javax.servlet.http.Cookie;
@@ -31,6 +32,11 @@ public class IndexController {
                 break;
             }
         }
+        return "index";
+    }
+
+    @RequestMapping("/logout")
+    public String logout() {
         return "index";
     }
 }
