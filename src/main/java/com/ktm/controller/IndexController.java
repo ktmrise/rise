@@ -45,6 +45,7 @@ public class IndexController {
 
 
         IPage<QuestionDTO> result = questionService.paging(new Page<QuestionDTO>(current, size));
+        request.setAttribute("questions",result.getRecords());
         return "index";
     }
 

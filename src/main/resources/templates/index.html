@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Rise社区</title>
@@ -47,9 +47,10 @@
 
 
             <ul class="nav navbar-nav navbar-right" style="margin-right: 20px">
-                <li><a href="/publish"  th:if="${session.user!=null}" style="color: white;font-size: 16px">发起</a></li>
+                <li><a href="/publish" th:if="${session.user!=null}" style="color: white;font-size: 16px">发起</a></li>
                 <li class="dropdown">
-                    <a href="#" th:if="${session.user!=null}" th:text="${session.user.name}" style="color: white;font-size: 16px"
+                    <a href="#" th:if="${session.user!=null}" th:text="${session.user.name}"
+                       style="color: white;font-size: 16px"
                        class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -73,97 +74,32 @@
     <div class="row">
         <div class="col-lg-offset-1  col-lg-7 col-sm-12 col-md-9" style="background-color: white;">
             <div style="height: 40px;line-height: 63px">
-                <i class="glyphicon glyphicon-plus" style="font-size: 20px;margin-left: 10px">发起</i>
+                <i class="glyphicon glyphicon-list" style="font-size: 25px;font-weight: 700;margin-left: 10px"></i>
+                <span style="font-size: 25px;font-weight: 700;margin-left: 8px"> 发现</span>
             </div>
             <hr>
-            <div class="media">
+
+            <div class="media" th:each="question : ${questions}">
                 <div class="media-left">
                     <a href="#">
-                        <img class="media-object" src="https://avatars3.githubusercontent.com/u/60636088?s=60&v=4" alt="...">
+                        <img class="media-object" th:src="${question.avatarUrl}" alt="...">
                     </a>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading">Media heading</h4>
-                    11111111111111111
+                    <a href="" class="media-heading" th:text="${question.title}"
+                       style="display: block;font-size: 20px;text-decoration:none"></a>
+
+                    <!--                    <span th:text="${question.description}" style="color: #999"></span>-->
+
+                    <span style="color: #999">
+                             <span th:text="${question.commentCount}"></span>个回复 •
+                        <span th:text="${question.viewCount}"></span> 次浏览  •
+                        <span th:text="${question.createTime}"></span> 发布
+                        </span>
+
                 </div>
             </div>
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img class="media-object" src="https://avatars3.githubusercontent.com/u/60636088?s=60&v=4" alt="...">
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">Media heading</h4>
-                    11111111111111111
-                </div>
-            </div>
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img class="media-object" src="https://avatars3.githubusercontent.com/u/60636088?s=60&v=4" alt="...">
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">Media heading</h4>
-                    11111111111111111
-                </div>
-            </div>
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img class="media-object" src="https://avatars3.githubusercontent.com/u/60636088?s=60&v=4" alt="...">
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">Media heading</h4>
-                    11111111111111111
-                </div>
-            </div>
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img class="media-object" src="https://avatars3.githubusercontent.com/u/60636088?s=60&v=4" alt="...">
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">Media heading</h4>
-                    11111111111111111
-                </div>
-            </div>
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img class="media-object" src="https://avatars3.githubusercontent.com/u/60636088?s=60&v=4" alt="...">
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">Media heading</h4>
-                    11111111111111111
-                </div>
-            </div>
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img class="media-object" src="https://avatars3.githubusercontent.com/u/60636088?s=60&v=4" alt="...">
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">Media heading</h4>
-                    11111111111111111
-                </div>
-            </div>
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img class="media-object" src="https://avatars3.githubusercontent.com/u/60636088?s=60&v=4" alt="...">
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">Media heading</h4>
-                    11111111111111111
-                </div>
-            </div>
+
         </div>
 
 
