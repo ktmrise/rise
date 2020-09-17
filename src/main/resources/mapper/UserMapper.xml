@@ -11,6 +11,7 @@
         <result column="modified_time" property="modifiedTime" />
         <result column="token" property="token" />
         <result column="bio" property="bio" />
+        <result column="avatar_url" property="avatarUrl" />
     </resultMap>
 
 </mapper>

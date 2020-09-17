@@ -1,5 +1,8 @@
 package com.ktm.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.ktm.dto.QuestionDTO;
 import com.ktm.entity.Question;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -14,4 +17,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface IQuestionService extends IService<Question> {
 
     void insert(Question question);
+
+    IPage<QuestionDTO> paging(Page page);
 }

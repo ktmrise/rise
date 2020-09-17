@@ -1,5 +1,9 @@
 package com.ktm.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.ktm.dto.QuestionDTO;
 import com.ktm.entity.Question;
 import com.ktm.mapper.QuestionMapper;
 import com.ktm.service.IQuestionService;
@@ -29,5 +33,11 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
         question.setCreateTime(LocalDate.now())
                 .setModifiedTime(LocalDate.now());
         questionMapper.insert(question);
+    }
+
+    @Override
+    public IPage<QuestionDTO> paging(Page page) {
+      IPage<QuestionDTO> result=  questionMapper.selectPages(page);
+        return result;
     }
 }

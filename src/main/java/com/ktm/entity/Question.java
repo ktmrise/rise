@@ -24,25 +24,25 @@ public class Question implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    Integer id;
 
-    private String title;
+    String title;
 
-    private String description;
+    String description;
 
-    private LocalDate createTime;
+    LocalDate createTime;
 
-    private LocalDate modifiedTime;
+    LocalDate modifiedTime;
 
-    private Integer creator;
+    Integer creator;
 
-    private Integer commentCount;
+    Integer commentCount;
 
-    private Integer viewCount;
+    Integer viewCount;
 
-    private Integer likeCount;
+    Integer likeCount;
 
-    private String tag;
+    String tag;
 
 
 }

@@ -38,5 +38,7 @@ public class User implements Serializable {
 
     private String bio;
 
+    private String avatarUrl;
+
 
 }
