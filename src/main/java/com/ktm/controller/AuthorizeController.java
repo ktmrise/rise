@@ -60,7 +60,8 @@ public class AuthorizeController {
                         setModifiedTime(LocalDate.now()).
                         setName(githubUser.getName()).
                         setAccountId(String.valueOf(githubUser.getId())).
-                        setToken(token);
+                        setToken(token).
+                        setBio(githubUser.getBio());
                 userService.save(user);
                 response.addCookie(new Cookie("token", token));
             } else {

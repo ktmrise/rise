@@ -10,6 +10,7 @@
         <result column="create_time" property="createTime" />
         <result column="modified_time" property="modifiedTime" />
         <result column="token" property="token" />
+        <result column="bio" property="bio" />
     </resultMap>
 
 </mapper>
