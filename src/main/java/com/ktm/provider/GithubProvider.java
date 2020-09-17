@@ -29,7 +29,7 @@ public class GithubProvider {
 
             String untreatedToken = response.body().string();
             String token = untreatedToken.split("=")[1].split("&")[0];
-            System.out.println(token);
+            log.info(token);
             return token;
         } catch (IOException e) {
             log.error("token获取出错");
@@ -50,6 +50,7 @@ public class GithubProvider {
         try (Response response = client.newCall(request).execute()) {
             String res = response.body().string();
             GithubUser githubUser = JSON.parseObject(res, GithubUser.class);
+            log.info(githubUser.getName());
             return githubUser;
 
         } catch (IOException e) {
