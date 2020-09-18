@@ -33,17 +33,8 @@ public class IndexController {
     @GetMapping({"/index", "/"})
     public String index(HttpServletRequest request,
                         @RequestParam(name = "current", defaultValue = "1") int current,
-                        @RequestParam(name = "size", defaultValue = "2", required = false) int size) {
-        Cookie[] cookies = request.getCookies();
-        for (Cookie cookie : cookies) {
-            if (cookie.getName().equals("token")) {
-                User user = userService.getOne(new LambdaQueryWrapper<User>().eq(User::getToken, cookie.getValue()));
-                if (user != null) {
-                    request.getSession().setAttribute("user", user);
-                }
-                break;
-            }
-        }
+                        @RequestParam(name = "size", defaultValue = "8", required = false) int size) {
+
 
 
         IPage<QuestionDTO> result = questionService.paging(new Page<QuestionDTO>(current, size));
@@ -95,7 +86,12 @@ public class IndexController {
         }
 
         if (current >= totalPages - 6) {
-            for (int i = (int) (totalPages - 6); i <= totalPages; i++) {
+
+
+            for (int i = current; i <totalPages-3; i++) {
+                pageList.add(i);
+            }
+            for (int i = (int) (totalPages - 3); i <= totalPages; i++) {
                 pageList.add(i);
             }
             return pageList;
