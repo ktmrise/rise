@@ -38,16 +38,17 @@
                     </a>
                 </div>
                 <div class="media-body">
-                    <a href="" class="media-heading" th:text="${question.title}"
+                    <a th:href="@{/question(questionId=${question.id})}" class="media-heading"
+                       th:text="${question.title}"
                        style="display: block;font-size: 20px;text-decoration:none"></a>
 
                     <!--                    <span th:text="${question.description}" style="color: #999"></span>-->
 
                     <span style="color: #999">
-                             <span th:text="${question.commentCount}"></span>个回复 •
+                        <span th:text="${question.commentCount}"></span>个回复 •
                         <span th:text="${question.viewCount}"></span> 次浏览  •
                         <span th:text="${question.createTime}"></span> 发布
-                        </span>
+                    </span>
 
                 </div>
             </div>
@@ -74,18 +75,23 @@
 
         </div>
 
-        <!--右部-->
+
         <div class="col-lg-3 col-sm-12 col-md-3" style="background-color: white;height: 745.6px;">
+
             <h4 style="margin-top: 40px">问题发起指南</h4>
             <p>• 问题标题: 请用精简的语言描述您发布的问题，不超过25字</p>
 
             <p> • 问题补充: 详细补充您的问题内容，并确保问题描述清晰直观, 并提供一些相关的资料：</p>
 
-        </div>
-    </div>
 
-    <!--底部-->
-    <div style="text-align: center;margin-top: 30px">Copyright © 2020 · CC BY-NC-SA 3.0 · Rise社区</div>
+        </div>
+
+
+    </div>
+</div>
+
+<!--底部-->
+<div style="text-align: center;margin-top: 30px">Copyright © 2020 · CC BY-NC-SA 3.0 · Rise社区</div>
 </div>
 
 </body>

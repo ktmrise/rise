@@ -22,6 +22,22 @@
         from question q
          join user u on q.creator = u.id
     </select>
+    <select id="selectPagesByUserId" resultType="com.ktm.dto.QuestionDTO">
+                 select q.*,
+        u.name as authorName,
+        u.avatar_url as avatarUrl
+        from question q
+         join user u on q.creator = u.id
+         ${ew.customSqlSegment}
+    </select>
+    <select id="selectQuestionById" resultType="com.ktm.dto.QuestionDTO" parameterType="java.lang.Integer">
+         select q.*,
+        u.name as authorName,
+        u.avatar_url as avatarUrl
+        from question q
+         join user u on q.creator = u.id
+         where q.id=#{id}
+    </select>
 
 
 </mapper>

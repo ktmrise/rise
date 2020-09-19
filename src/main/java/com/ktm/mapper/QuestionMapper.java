@@ -20,4 +20,8 @@ import org.apache.ibatis.annotations.Param;
 public interface QuestionMapper extends BaseMapper<Question> {
 
     IPage<QuestionDTO> selectPages(Page page);
+
+    IPage<QuestionDTO> selectPagesByUserId(Page page,@Param(Constants.WRAPPER)   QueryWrapper wrapper);
+
+    QuestionDTO selectQuestionById(Integer id);
 }

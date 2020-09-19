@@ -19,4 +19,8 @@ public interface IQuestionService extends IService<Question> {
     void insert(Question question);
 
     IPage<QuestionDTO> paging(Page page);
+
+    IPage<QuestionDTO> pagingByUserId(Page page,Integer id);
+
+    QuestionDTO selectQuestionById(Integer id);
 }

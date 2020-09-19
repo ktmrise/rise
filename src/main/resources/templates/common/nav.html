@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/bootstrap.js"></script>
+    <style>
+
+    </style>
+
 </head>
 <body>
 <div th:fragment="nav">
@@ -39,18 +43,27 @@
 
 
                 <ul class="nav navbar-nav navbar-right" style="margin-right: 20px">
-                    <li><a href="/publish" th:if="${session.user!=null}" style="color: white;font-size: 16px">发起</a></li>
-                    <li class="dropdown">
+                    <li>
+
+                        <a href="/publish" th:if="${session.user!=null}" style="color: white;font-size: 16px">发起</a>
+                    </li>
+                    <li>
+                        <img style="width: 40px;margin-top: 5px;border-radius: 30px;
+        }" class="img-rounded" th:src="${session.user.avatarUrl}">
+                    </li>
+                    <li class="dropdown" role="presentation">
                         <a href="#" th:if="${session.user!=null}" th:text="${session.user.name}"
                            style="color: white;font-size: 16px"
                            class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false"><span class="caret"></span></a>
-                        <ul class="dropdown-menu">
+                           aria-expanded="false"><span class="caret"></span>
+                        </a>
+                        <ul class="" th:classappend="dropdown-menu">
                             <li><a href="/profile/questions">我的问题</a></li>
                             <li><a href="/user/logout">退出登录</a></li>
 
                         </ul>
                     </li>
+
                     <li><a th:if="${session.user==null}" style="color: white;font-size: 16px"
                            href="https://github.com/login/oauth/authorize?client_id=51a6b073b4b9e92a2159&redirect_uri=http://localhost:8887/callback&scope=user&state=1">
                         登录</a></li>

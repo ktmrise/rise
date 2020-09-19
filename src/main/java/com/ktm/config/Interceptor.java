@@ -25,18 +25,22 @@ public class Interceptor implements WebMvcConfigurer {
         registry.addInterceptor(new HandlerInterceptor() {
             @Override
             public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+
                 Cookie[] cookies = request.getCookies();
-                for (Cookie cookie : cookies) {
-                    if (cookie.getName().equals("token")) {
-                        User user = userService.getOne(new LambdaQueryWrapper<User>().eq(User::getToken, cookie.getValue()));
-                        if (user != null) {
-                            request.getSession().setAttribute("user", user);
+                if (cookies.length > 0) {
+                    for (Cookie cookie : cookies) {
+                        if (cookie.getName().equals("token")) {
+                            User user = userService.getOne(new LambdaQueryWrapper<User>().eq(User::getToken, cookie.getValue()));
+                            if (user != null) {
+                                request.getSession().setAttribute("user", user);
+                            }
+                            break;
                         }
-                        break;
                     }
                 }
+
                 return true;
             }
-        }).addPathPatterns("/**");
+        }).addPathPatterns("/index");
     }
 }

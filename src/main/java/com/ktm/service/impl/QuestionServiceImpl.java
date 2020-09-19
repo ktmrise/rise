@@ -37,7 +37,18 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
 
     @Override
     public IPage<QuestionDTO> paging(Page page) {
-      IPage<QuestionDTO> result=  questionMapper.selectPages(page);
-        return result;
+        return questionMapper.selectPages(page);
     }
+
+    @Override
+    public IPage<QuestionDTO> pagingByUserId(Page page, Integer userId) {
+        return questionMapper.selectPagesByUserId(page, new QueryWrapper<QuestionDTO>().eq("q.creator", userId));
+    }
+
+    @Override
+    public QuestionDTO selectQuestionById(Integer id) {
+        return questionMapper.selectQuestionById(id);
+    }
+
+
 }

@@ -31,46 +31,46 @@
             </div>
             <hr>
 
-            <!--            <div class="media" th:each="question : ${questions}">-->
-            <!--                <div class="media-left">-->
-            <!--                    <a href="#">-->
-            <!--                        <img class="media-object" th:src="${question.avatarUrl}" alt="...">-->
-            <!--                    </a>-->
-            <!--                </div>-->
-            <!--                <div class="media-body">-->
-            <!--                    <a href="" class="media-heading" th:text="${question.title}"-->
-            <!--                       style="display: block;font-size: 20px;text-decoration:none"></a>-->
+                        <div class="media" th:each="question : ${questions}">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" th:src="${question.avatarUrl}" alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <a href="" class="media-heading" th:text="${question.title}"
+                                   style="display: block;font-size: 20px;text-decoration:none"></a>
 
-            <!--                    &lt;!&ndash;                    <span th:text="${question.description}" style="color: #999"></span>&ndash;&gt;-->
+                                <!--                    <span th:text="${question.description}" style="color: #999"></span>-->
 
-            <!--                    <span style="color: #999">-->
-            <!--                             <span th:text="${question.commentCount}"></span>个回复 •-->
-            <!--                        <span th:text="${question.viewCount}"></span> 次浏览  •-->
-            <!--                        <span th:text="${question.createTime}"></span> 发布-->
-            <!--                        </span>-->
+                                <span style="color: #999">
+                                         <span th:text="${question.commentCount}"></span>个回复 •
+                                    <span th:text="${question.viewCount}"></span> 次浏览  •
+                                    <span th:text="${question.createTime}"></span> 发布
+                                    </span>
 
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--            <nav aria-label="Page navigation">-->
-            <!--                <ul class="pagination">-->
-            <!--                    <li th:unless="${isContainFirst}">-->
-            <!--                        <a th:href="@{/index(current=1)}" aria-label="Previous">-->
-            <!--                            <span aria-hidden="true">&laquo;</span>-->
-            <!--                        </a>-->
-            <!--                    </li>-->
-            <!--                    <li th:if="${current!=1}"><a th:href="@{/index(current=${current-1})}">&lsaquo;</a></li>-->
-            <!--                    <li th:each="page : ${pages}" class="" th:classappend="${page==current}?'active':''"><a-->
-            <!--                            th:href="@{/index(current=${page})}" th:text="${page}"></a></li>-->
+                            </div>
+                        </div>
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li th:unless="${isContainFirst}">
+                                    <a th:href="@{/index(current=1)}" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li th:if="${current!=1}"><a th:href="@{/index(current=${current-1})}">&lsaquo;</a></li>
+                                <li th:each="page : ${pages}" class="" th:classappend="${page==current}?'active':''"><a
+                                        th:href="@{/index(current=${page})}" th:text="${page}"></a></li>
 
-            <!--                    <li th:if="${current!=total}"><a th:href="@{/index(current=${current+1})}">&rsaquo;</a></li>-->
+                                <li th:if="${current!=total}"><a th:href="@{/index(current=${current+1})}">&rsaquo;</a></li>
 
-            <!--                    <li th:unless="${isContainEnd}">-->
-            <!--                        <a th:href="@{/index(current=${total})}" aria-label="Next">-->
-            <!--                            <span aria-hidden="true">&raquo;</span>-->
-            <!--                        </a>-->
-            <!--                    </li>-->
-            <!--                </ul>-->
-            <!--            </nav>-->
+                                <li th:unless="${isContainEnd}">
+                                    <a th:href="@{/index(current=${total})}" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
 
         </div>
 

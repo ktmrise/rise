@@ -7,6 +7,7 @@ import com.ktm.service.IQuestionService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -30,6 +31,11 @@ public class PublishController {
 
         question.setCreator(user.getId());
         questionService.insert(question);
+        return "publish";
+    }
+
+    @GetMapping("/publishByQuestionId")
+    public String publishByQuestionId(@RequestParam(name = "questionId") Integer id) {
         return "publish";
     }
 }
