@@ -32,32 +32,36 @@
                         阅读数: <span th:text="${question.viewCount}"></span>
             </span>
             <hr>
-            <div style="font-weight: bold;font-size: 16px" class="col-lg-12 col-sm-12 col-md-12" th:text="${question.description}"></div>
+            <div style="font-weight: bold;font-size: 16px" class="col-lg-12 col-sm-12 col-md-12"
+                 th:text="${question.description}"></div>
             <hr class="col-lg-12 col-sm-12 col-md-12">
-            <span class="glyphicon glyphicon-pencil" >
-                <a th:href="@{/publishByQuestionId(questionId=${question.id})}" style="text-decoration: none;margin-left: -6px">编辑</a>
+            <div></div>
+            <span class="glyphicon glyphicon-pencil"  th:if="${session.user!=null}" th:unless="${question.authorName!=session.user.name}">
+                <a th:href="@{/publishByQuestionId(questionId=${question.id})}"
+
+                   style="text-decoration: none;margin-left: -6px">编辑</a>
             </span>
         </div>
 
 
         <div class="col-lg-3 col-sm-12 col-md-3" style="background-color: white;height: 745.6px;">
             <div class="col-lg-12 col-sm-12 col-md-12">
-                <h3>发起人</h3>
-                <div class="media" >
-                    <div class="media-left" >
+                <h3 style="font-weight: bold">发起人</h3>
+                <div class="media">
+                    <div class="media-left">
                         <a href="">
-                            <img class="media-object" th:src="${question.avatarUrl}" alt="">
+                            <img class="media-object" th:src="${question.avatarUrl}" alt="" width="60px">
                         </a>
                     </div>
                     <div class="media-body" style="line-height: 60px;font-size: 16px;font-weight: 400">
 
-                       <span th:text="${question.authorName}"></span>
+                        <span th:text="${question.authorName}"></span>
 
                     </div>
                 </div>
             </div>
             <div class="col-lg-12 col-sm-12 col-md-12">
-                <h3>相关问题</h3>
+                <h3 style="font-weight: bold">相关问题</h3>
             </div>
 
         </div>

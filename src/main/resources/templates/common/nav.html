@@ -49,7 +49,7 @@
                     </li>
                     <li>
                         <img style="width: 40px;margin-top: 5px;border-radius: 30px;
-        }" class="img-rounded" th:src="${session.user.avatarUrl}">
+        }" class="img-rounded" th:if="${session.user!=null}"  th:src="${session.user.avatarUrl}">
                     </li>
                     <li class="dropdown" role="presentation">
                         <a href="#" th:if="${session.user!=null}" th:text="${session.user.name}"

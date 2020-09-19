@@ -42,8 +42,4 @@ public class IndexController extends BaseController {
 
 
 
-    @RequestMapping("/logout")
-    public String logout() {
-        return "index";
-    }
 }

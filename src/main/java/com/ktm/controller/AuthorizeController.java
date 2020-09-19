@@ -26,6 +26,9 @@ import java.util.UUID;
 public class AuthorizeController {
 
 
+    private static int count;
+
+
     @Value("${client_id}")
     String client_id;
 
@@ -66,6 +69,24 @@ public class AuthorizeController {
                 userService.save(user);
                 response.addCookie(new Cookie("token", token));
             } else {
+                if (!dbUser.getBio().equals(githubUser.getBio())) {
+                    dbUser.setBio(githubUser.getBio());
+                    count++;
+                }
+                if (!dbUser.getAvatarUrl().equals(githubUser.getAvatar_url())) {
+                    dbUser.setAvatarUrl(githubUser.getAvatar_url());
+                    count++;
+                }
+                if (!dbUser.getName().equals(githubUser.getName())) {
+                    dbUser.setName(githubUser.getName());
+                    count++;
+                }
+                if (count != 0) {
+                    dbUser.setModifiedTime(LocalDate.now());
+                    userService.update(dbUser, null);
+                    count = 0;
+                }
+
                 response.addCookie(new Cookie("token", dbUser.getToken()));
             }
 

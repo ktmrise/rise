@@ -50,5 +50,16 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
         return questionMapper.selectQuestionById(id);
     }
 
+    @Override
+    public void insertOrUpdate(Question question) {
+        Question dbQuestion = questionMapper.selectById(question.getId());
+        if (dbQuestion != null) {
+            question.setModifiedTime(LocalDate.now());
+            questionMapper.updateById(question);
+        } else {
+            questionMapper.insert(question);
+        }
+    }
+
 
 }
