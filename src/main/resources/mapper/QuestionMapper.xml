@@ -15,12 +15,18 @@
         <result column="like_count" property="likeCount" />
         <result column="tag" property="tag" />
     </resultMap>
+    <update id="updateQuestionById" parameterType="java.lang.Integer">
+        update question set view_count=view_count+1 where id=#{id}
+
+
+    </update>
     <select id="selectPages" resultType="com.ktm.dto.QuestionDTO">
             select q.*,
         u.name as authorName,
         u.avatar_url as avatarUrl
         from question q
          join user u on q.creator = u.id
+         order by q.id desc
     </select>
     <select id="selectPagesByUserId" resultType="com.ktm.dto.QuestionDTO">
                  select q.*,

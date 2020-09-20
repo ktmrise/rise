@@ -21,7 +21,8 @@ public class PublishController {
 
 
     @GetMapping("/publish")
-    public String publish() {
+    public String publish(HttpServletRequest request) {
+        request.setAttribute("question",new Question());
         return "publish";
     }
 

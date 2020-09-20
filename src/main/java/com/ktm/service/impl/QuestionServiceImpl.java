@@ -3,6 +3,8 @@ package com.ktm.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.ktm.Exception.CustomizeErrorCode;
+import com.ktm.Exception.CustomizeException;
 import com.ktm.dto.QuestionDTO;
 import com.ktm.entity.Question;
 import com.ktm.mapper.QuestionMapper;
@@ -42,12 +44,17 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
 
     @Override
     public IPage<QuestionDTO> pagingByUserId(Page page, Integer userId) {
-        return questionMapper.selectPagesByUserId(page, new QueryWrapper<QuestionDTO>().eq("q.creator", userId));
+        return questionMapper.selectPagesByUserId(page, new QueryWrapper<QuestionDTO>().eq("q.creator", userId).orderByDesc("q.id"));
     }
 
     @Override
     public QuestionDTO selectQuestionById(Integer id) {
-        return questionMapper.selectQuestionById(id);
+        QuestionDTO questionDTO = questionMapper.selectQuestionById(id);
+        questionMapper.updateQuestionById(id);
+        if (questionDTO == null) {
+            throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
+        }
+        return questionDTO;
     }
 
     @Override

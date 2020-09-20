@@ -24,4 +24,6 @@ public interface QuestionMapper extends BaseMapper<Question> {
     IPage<QuestionDTO> selectPagesByUserId(Page page,@Param(Constants.WRAPPER)   QueryWrapper wrapper);
 
     QuestionDTO selectQuestionById(Integer id);
+
+    void updateQuestionById(Integer id);
 }
