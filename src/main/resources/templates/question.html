@@ -15,17 +15,35 @@
         background: url("imgs/bg.jpg") repeat;
     }
 
+    .comment {
+        margin-left: 5px;
+        font-size: 17px;
+        color: #999;
+    }
+    .comment:hover {
+        color: #499ef3;
+    }
+
 </style>
 <body>
 
 <div>
     <!--头部-->
-
+    <!--头部-->
+    <!--头部-->
+    <!--头部-->
+    <!--头部-->
     <div th:insert="common/nav :: nav"></div>
 
     <!--中间内容-->
+    <!--中间内容-->
+    <!--中间内容-->
     <div class="container-fluid">
         <div class="row" style="background-color: white;margin-left: 135px;margin-right: 130px">
+            <!--左边文章列表-->
+            <!--左边文章列表-->
+            <!--左边文章列表-->
+            <!--左边文章列表-->
             <!--左边文章列表-->
             <div class="col-lg-9" style="background-color: white;">
                 <h4><span th:text="${question.title}"></span></h4>
@@ -45,38 +63,41 @@
                    style="text-decoration: none;margin-left: -6px">编辑</a>
             </span>
 
-
+                <!--评论内容-------------------->
+                <!--评论内容-------------------->
+                <!--评论内容-------------------->
                 <div style="margin-top: 50px">
                     <h4><span th:text="${question.commentCount}"></span>个回复</h4>
                     <hr>
-                    <div class="media">
+                    <div class="media" th:each="comment:  ${comments}">
                         <div class="media-left">
                             <a href="#">
-                                <img class="media-object" th:src="${question.avatarUrl}" alt="..." width="60px">
+                                <img class="media-object" th:src="${comment.authorAvatarUrl}" alt="..." width="60px">
                             </a>
                         </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" th:text="${question.authorName}"></h4>
-                            111
+                        <div class="media-body" style="line-height: 36px">
+                            <h4 class="media-heading" th:text="${comment.authorName}"></h4>
+                            <span th:text="${comment.content}"></span>
+                            <div>
+                                <span class="glyphicon glyphicon-thumbs-up" style="font-size: 15px"></span>
+                                <span class="glyphicon glyphicon-comment comment"></span>
+                                <span th:text="${comment.createTime}" class="pull-right"></span>
+                            </div>
+
                         </div>
-                    </div>
-                    <hr>
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                                <img class="media-object" th:src="${question.avatarUrl}" alt="..." width="60px">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading" th:text="${question.authorName}"></h4>
-                            111
-                        </div>
+                        <hr>
                     </div>
 
+
                 </div>
+
+
+                <!--回复框------------------------------------------->
+                <!--回复框------------------------------------------->
+                <!--回复框------------------------------------------->
+                <!--回复框------------------------------------------->
                 <div id="reply-template">
                     <hr>
-                    <!--回复框-->
                     <div class="form-group" style="margin-top: 20px">
                         <label for="reply">
                             <div class="media">
@@ -94,7 +115,7 @@
 
                         </label>
                         <textarea class="form-control" id="reply" name="content"
-                                  style="height: 300px"></textarea>
+                                  rows="10"></textarea>
                     </div>
                     <input type="hidden" id="questionId" th:value="${question.id}">
                     <button onclick="reply()" class="btn btn-success pull-right" style="margin-bottom: 10px">回复</button>
@@ -130,9 +151,12 @@
     </div>
 
     <!--底部-->
+    <!--底部-->
+    <!--底部-->
+    <!--底部-->
+    <!--底部-->
     <div style="text-align: center;margin-top: 30px">Copyright © 2020 · CC BY-NC-SA 3.0 · Rise社区</div>
 </div>
-
 
 
 </body>

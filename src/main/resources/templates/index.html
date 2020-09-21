@@ -97,4 +97,16 @@
 </div>
 
 </body>
+
+
+<script>
+    $(function () {
+        let close = localStorage.getItem("close");
+        if (close === "true") {
+            window.close();
+            localStorage.removeItem("close");
+        }
+
+    });
+</script>
 </html>

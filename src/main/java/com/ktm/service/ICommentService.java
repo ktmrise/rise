@@ -1,7 +1,10 @@
 package com.ktm.service;
 
+import com.ktm.dto.CommentDTO;
 import com.ktm.entity.Comment;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
  * <p>
@@ -14,4 +17,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface ICommentService extends IService<Comment> {
 
     void insertComment(Comment comment);
+
+    List<CommentDTO> selectComments(Integer parentId);
 }

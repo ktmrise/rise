@@ -1,7 +1,10 @@
 package com.ktm.mapper;
 
+import com.ktm.dto.CommentDTO;
 import com.ktm.entity.Comment;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface CommentMapper extends BaseMapper<Comment> {
 
+    List<CommentDTO> selectCommentsByParentId(Integer parentId);
 }

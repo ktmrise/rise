@@ -11,7 +11,7 @@ function reply() {
             parentId: questionId,
             content: content,
             type: 1
-        }),//schoolList是你要提交是json字符串
+        }),
         success: function (response) {
             console.log(response);
             if (response.code === 200) {
@@ -20,6 +20,7 @@ function reply() {
                 if (response.code === 4000) {
                     let isAccepted = confirm(response.message);
                     if (isAccepted) {
+                        localStorage.setItem("close", "true");
                         window.open("https://github.com/login/oauth/authorize?client_id=51a6b073b4b9e92a2159&redirect_uri=http://localhost:8887/callback&scope=user&state=1"
                         );
                     }

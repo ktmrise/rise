@@ -2,6 +2,7 @@ package com.ktm.service.impl;
 
 import com.ktm.Exception.CustomizeErrorCode;
 import com.ktm.Exception.CustomizeException;
+import com.ktm.dto.CommentDTO;
 import com.ktm.entity.Comment;
 import com.ktm.entity.Question;
 import com.ktm.mapper.CommentMapper;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * <p>
@@ -55,5 +57,11 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
 
         }
 
+    }
+
+    @Override
+    public List<CommentDTO> selectComments(Integer parentId) {
+
+        return commentMapper.selectCommentsByParentId(parentId);
     }
 }

@@ -21,24 +21,24 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class Comment implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+     static final long serialVersionUID = 1L;
 
     @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+     Integer id;
 
-    private Integer parentId;
+     Integer parentId;
 
-    private Integer type;
+     Integer type;
 
-    private Integer commentator;
+     Integer commentator;
 
-    private LocalDate createTime;
+     LocalDate createTime;
 
-    private LocalDate modifiedTime;
+     LocalDate modifiedTime;
 
-    private Integer likeCount;
+     Integer likeCount;
 
-    private String content;
+     String content;
 
 
 }
