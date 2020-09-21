@@ -19,4 +19,6 @@ public interface ICommentService extends IService<Comment> {
     void insertComment(Comment comment);
 
     List<CommentDTO> selectComments(Integer parentId);
+
+    List<CommentDTO> selectTwoComments(Integer parentId);
 }

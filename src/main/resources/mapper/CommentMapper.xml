@@ -23,5 +23,15 @@
       where c.type=1 and c.parent_id =#{parentId}
       order by c.id desc
     </select>
+    <select id="selectTwoCommentsByParentId" resultType="com.ktm.dto.CommentDTO"
+            parameterType="java.lang.Integer">
+         select c.*,
+       u.name       as authorName,
+       u.avatar_url as authorAvatarUrl
+      from comment c
+         join user u on c.commentator = u.id
+      where c.type=2 and c.parent_id =#{parentId}
+      order by c.id desc
+    </select>
 
 </mapper>

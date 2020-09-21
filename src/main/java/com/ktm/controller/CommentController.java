@@ -1,6 +1,8 @@
 package com.ktm.controller;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.ktm.dto.CommentDTO;
 import com.ktm.dto.ResultDTO;
 import com.ktm.entity.Comment;
 import com.ktm.entity.Question;
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * <p>
@@ -35,7 +38,7 @@ public class CommentController {
     public ResultDTO comment(@RequestBody Comment comment, HttpServletRequest request) {
         User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
-            return ResultDTO.fail("当前操作需要登录",4000);
+            return ResultDTO.fail("当前操作需要登录", 4000);
         }
         comment.setCommentator(user.getId()).setCreateTime(LocalDate.now()).setModifiedTime(LocalDate.now());
 
@@ -46,8 +49,9 @@ public class CommentController {
 
 
     @ResponseBody
-    @GetMapping("/test")
-    public Object test() {
-        return  ResultDTO.ok();
+    @GetMapping("/selectTwoComments")
+    public List<CommentDTO> selectTwoComments(Integer id) {
+        List<CommentDTO> commentDTOS = commentService.selectTwoComments(id);
+        return commentDTOS;
     }
 }

@@ -64,4 +64,9 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
 
         return commentMapper.selectCommentsByParentId(parentId);
     }
+
+    @Override
+    public List<CommentDTO> selectTwoComments(Integer parentId) {
+        return commentMapper.selectTwoCommentsByParentId(parentId);
+    }
 }

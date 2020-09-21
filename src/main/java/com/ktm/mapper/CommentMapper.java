@@ -17,4 +17,6 @@ import java.util.List;
 public interface CommentMapper extends BaseMapper<Comment> {
 
     List<CommentDTO> selectCommentsByParentId(Integer parentId);
+
+    List<CommentDTO> selectTwoCommentsByParentId(Integer parentId);
 }
