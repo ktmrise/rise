@@ -15,7 +15,7 @@ function reply() {
         success: function (response) {
             console.log(response);
             if (response.code === 200) {
-                $("#reply").val("");
+                location.reload();
             } else {
                 if (response.code === 4000) {
                     let isAccepted = confirm(response.message);
@@ -33,5 +33,19 @@ function reply() {
         }
 
     })
+
+}
+
+
+function collapseComment(e) {
+    let id = e.getAttribute("data-id");
+    let comment = $("#" + id);
+
+    if (comment.hasClass("in")) {
+        comment.removeClass('in');
+    } else {
+        comment.addClass("in");
+
+    }
 
 }

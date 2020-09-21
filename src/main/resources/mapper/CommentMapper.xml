@@ -21,6 +21,7 @@
       from comment c
          join user u on c.commentator = u.id
       where c.type=1 and c.parent_id =#{parentId}
+      order by c.id desc
     </select>
 
 </mapper>
