@@ -42,7 +42,7 @@ public class Interceptor implements WebMvcConfigurer {
 
                 return true;
             }
-        }).addPathPatterns("/index");
+        }).addPathPatterns("/**");
     }
 
 

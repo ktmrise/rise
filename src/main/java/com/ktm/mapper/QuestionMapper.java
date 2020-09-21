@@ -25,5 +25,7 @@ public interface QuestionMapper extends BaseMapper<Question> {
 
     QuestionDTO selectQuestionById(Integer id);
 
-    void updateQuestionById(Integer id);
+    void addViewCount(Integer id);
+
+    void addCommentCount(Integer id);
 }

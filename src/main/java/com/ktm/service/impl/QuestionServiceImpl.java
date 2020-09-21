@@ -13,7 +13,6 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
 import java.time.LocalDate;
 
 /**
@@ -50,7 +49,7 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
     @Override
     public QuestionDTO selectQuestionById(Integer id) {
         QuestionDTO questionDTO = questionMapper.selectQuestionById(id);
-        questionMapper.updateQuestionById(id);
+        questionMapper.addViewCount(id);
         if (questionDTO == null) {
             throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
         }
@@ -64,6 +63,8 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
             question.setModifiedTime(LocalDate.now());
             questionMapper.updateById(question);
         } else {
+            question.setCreateTime(LocalDate.now());
+            question.setModifiedTime(LocalDate.now());
             questionMapper.insert(question);
         }
     }
