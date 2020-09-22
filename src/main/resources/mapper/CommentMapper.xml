@@ -12,7 +12,11 @@
         <result column="modified_time" property="modifiedTime"/>
         <result column="like_count" property="likeCount"/>
         <result column="content" property="content"/>
+        <result column="comment_count" property="commentCount"/>
     </resultMap>
+    <update id="addCommentCount" parameterType="java.lang.Integer">
+        update comment set comment_count=comment_count+1 where id=#{parentId}
+    </update>
     <select id="selectCommentsByParentId" resultType="com.ktm.dto.CommentDTO"
             parameterType="java.lang.Integer">
            select c.*,

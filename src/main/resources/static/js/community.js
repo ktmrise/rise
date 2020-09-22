@@ -1,6 +1,10 @@
 function reply() {
     let questionId = $("#questionId").val();
     let content = $("#reply").val();
+    if (content === null || content === '') {
+        alert('回复内容不能为空');
+        return;
+    }
 
     extracted(questionId,content,1);
 }

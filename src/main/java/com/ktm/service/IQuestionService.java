@@ -6,6 +6,8 @@ import com.ktm.dto.QuestionDTO;
 import com.ktm.entity.Question;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务类
@@ -25,4 +27,6 @@ public interface IQuestionService extends IService<Question> {
     QuestionDTO selectQuestionById(Integer id);
 
     void insertOrUpdate(Question question);
+
+    List<Question> selectRelatedQuestions(Integer id);
 }

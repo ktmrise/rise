@@ -1,5 +1,6 @@
 package com.ktm.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * <p>
@@ -67,6 +69,32 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
             question.setModifiedTime(LocalDate.now());
             questionMapper.insert(question);
         }
+    }
+
+    @Override
+    public List<Question> selectRelatedQuestions(Integer id) {
+        Question dbQuestion = questionMapper.selectById(id);
+        QueryWrapper<Question> queryWrapper;
+
+        String dbQuestionTag = dbQuestion.getTag();
+        if (dbQuestionTag.contains(",")) {
+            String[] tags = dbQuestion.getTag().split(",");
+            queryWrapper = new QueryWrapper<>();
+            int count = 1;
+            for (String tag : tags) {
+                queryWrapper.like("tag", "%" + tag + "%");
+                if (count < tags.length) {
+                    queryWrapper.or();
+                }
+                count++;
+
+            }
+        } else {
+            return questionMapper.selectList(new LambdaQueryWrapper<Question>().eq(Question::getTag, dbQuestionTag));
+        }
+
+
+        return questionMapper.selectList(queryWrapper);
     }
 
 

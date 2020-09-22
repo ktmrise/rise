@@ -42,9 +42,11 @@ public class QuestionController {
     public String detail(@RequestParam(name = "questionId") Integer id, HttpServletRequest request) {
 
         QuestionDTO questionDTO = questionService.selectQuestionById(id);
+        List<Question> relatedQuestions = questionService.selectRelatedQuestions(id);
         List<CommentDTO> commentDTOS = commentService.selectComments(id);
         request.setAttribute("comments", commentDTOS);
         request.setAttribute("question", questionDTO);
+        request.setAttribute("relatedQuestions", relatedQuestions);
         return "question";
     }
 }

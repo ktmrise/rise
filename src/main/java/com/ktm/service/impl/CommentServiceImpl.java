@@ -54,6 +54,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
                 throw new CustomizeException(CustomizeErrorCode.COMMENT_NOT_FOUND);
             }
             commentMapper.insert(comment);
+            commentMapper.addCommentCount(dbComment.getId());
 
         }
 

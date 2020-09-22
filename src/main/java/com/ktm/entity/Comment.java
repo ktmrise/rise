@@ -1,16 +1,20 @@
 package com.ktm.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+
 import java.time.LocalDate;
+
 import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author ktm
@@ -21,24 +25,26 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class Comment implements Serializable {
 
-     static final long serialVersionUID = 1L;
+    static final long serialVersionUID = 1L;
 
     @TableId(value = "id", type = IdType.AUTO)
-     Integer id;
+    Integer id;
 
-     Integer parentId;
+    Integer parentId;
 
-     Integer type;
+    Integer type;
 
-     Integer commentator;
+    Integer commentator;
 
-     LocalDate createTime;
+    LocalDate createTime;
 
-     LocalDate modifiedTime;
+    LocalDate modifiedTime;
 
-     Integer likeCount;
+    Integer likeCount;
 
-     String content;
+    String content;
+
+    Integer commentCount;
 
 
 }
