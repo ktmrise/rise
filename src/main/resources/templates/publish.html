@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/community.js"></script>
     <style>
         body {
             background: url("imgs/bg.jpg") repeat;
@@ -14,6 +15,16 @@
 
         p {
             font-weight: 500;
+        }
+
+        .tag {
+            margin-right: 5px;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        .tagItem {
+            margin-top: 5px;
         }
 
 
@@ -26,48 +37,82 @@
 
 <div th:insert="common/nav :: nav"></div>
 <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-offset-1  col-lg-7 col-sm-12 col-md-9" style="background-color: white;">
-                <div style="height: 40px;line-height: 63px">
-                    <i class="glyphicon glyphicon-plus" style="font-size: 20px;margin-left: 10px">发起</i>
+    <div class="row" style="background-color: white;margin-left: 120px;margin-right: 120px">
+        <div class=" col-lg-8 col-sm-12 col-md-9">
+            <div style="height: 40px;line-height: 63px">
+                <i class="glyphicon glyphicon-plus" style="font-size: 20px;margin-left: 10px">发起</i>
+            </div>
+            <hr class="col-lg-12">
+            <hr>
+            <form action="/publish" method="post">
+                <!--                        <input type="hidden"  class="form-control" th:if="${question.id!=null}" th:value="${question.id}" name="id" id="id" placeholder="">-->
+                <div class="form-group">
+                    <label for="title">问题标题（简单扼要）:</label>
+                    <input type="text" class="form-control" th:value="${question.title}" name="title" id="title"
+                           placeholder="">
                 </div>
-                <hr class="col-lg-12">
-                <hr>
-                <form action="/publish" method="post">
-<!--                        <input type="hidden"  class="form-control" th:if="${question.id!=null}" th:value="${question.id}" name="id" id="id" placeholder="">-->
-                    <div class="form-group">
-                        <label for="title">问题标题（简单扼要）:</label>
-                        <input type="text" class="form-control" th:value="${question.title}" name="title" id="title" placeholder="">
+                <div class="form-group" style="margin-top: 20px">
+                    <label for="question">问题补充 (必填，请参照右侧提示):</label>
+                    <textarea class="form-control" id="question" th:text="${question.description}" name="description"
+                              style="height: 400px"></textarea>
+                </div>
+
+                <div class="form-group" style="margin-top: 20px">
+                    <label for="tag">添加标签:</label>
+                    <input onfocus="showTag()" style="margin-bottom: 5px" type="text"
+                           class="form-control" th:value="${question.tag}"
+                           id="tag"
+                           name="tag" placeholder="输入标签,以,隔开">
+
+
+                </div>
+
+                <!--标签栏---------->
+                <!--标签栏---------->
+                <!--标签栏---------->
+                <div id="tag-nav" hidden="hidden">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" th:each="selectTagCategory : ${tags}">
+                            <a th:href="${'#'+selectTagCategory.categoryName}"
+                               th:text="${selectTagCategory.categoryName}"
+                               aria-controls="home" role="tab"
+                               data-toggle="tab"
+                            ></a>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane  tagItem"
+                             th:id="${selectTagCategory.categoryName}"
+                             th:each="selectTagCategory : ${tags}">
+                            <a class=" glyphicon glyphicon-tags label-info label tag"
+                               th:each="tagName : ${selectTagCategory.tagNames}">
+                                <span onclick="selectTag(this)" th:data-tag="${tagName}" th:text="${tagName}"></span>
+                            </a>
+
+                        </div>
                     </div>
-                    <div class="form-group" style="margin-top: 20px">
-                        <label for="question">问题补充 (必填，请参照右侧提示):</label>
-                        <textarea class="form-control" id="question"  th:text="${question.description}" name="description" style="height: 400px"></textarea>
-                    </div>
-
-                    <div class="form-group" style="margin-top: 20px">
-                        <label for="tag">添加标签:</label>
-                        <input type="text" class="form-control" th:value="${question.tag}" id="tag" name="tag" placeholder="输入标签,已,隔开">
-                    </div>
-
-                    <button type="submit" class="btn btn-success pull-right" style="margin-bottom: 10px">确认发布</button>
-                </form>
-            </div>
+                </div>
 
 
-            <div class="col-lg-3 col-sm-12 col-md-3" style="background-color: white;height: 724px;">
-                <h4 style="margin-top: 40px">问题发起指南</h4>
-                <p>• 问题标题: 请用精简的语言描述您发布的问题，不超过25字</p>
+                <div style="    width: 400px;height: 35px;margin-left: 400px;line-height: 8px;margin-top: 10px"
+                     th:if="${error!=null}" class="alert alert-danger" role="alert" th:text="${error}"></div>
 
-                <p> • 问题补充: 详细补充您的问题内容，并确保问题描述清晰直观, 并提供一些相关的资料：</p>
-
-            </div>
+                <button type="submit" class="btn btn-success pull-right" style="margin-bottom: 10px;margin-top: 10px">确认发布</button>
+            </form>
         </div>
-        <div style="text-align: center;margin-top: 30px">Copyright © 2020 · CC BY-NC-SA 3.0 · Rise社区</div>
+
+
+        <div class="col-lg-4 col-sm-12 col-md-3">
+            <h4 style="margin-top: 40px">问题发起指南</h4>
+            <p>• 问题标题: 请用精简的语言描述您发布的问题，不超过25字</p>
+
+            <p> • 问题补充: 详细补充您的问题内容，并确保问题描述清晰直观, 并提供一些相关的资料：</p>
+
+        </div>
     </div>
-
-
-
-
+    <div style="text-align: center;margin-top: 30px">Copyright © 2020 · CC BY-NC-SA 3.0 · Rise社区</div>
+</div>
 
 
 </body>

@@ -6,17 +6,17 @@ function reply() {
         return;
     }
 
-    extracted(questionId,content,1);
+    extracted(questionId, content, 1);
 }
 
 let count = 0;
-let globalId='';
+let globalId = '';
 
 function collapseComment(e) {
     let id = e.getAttribute("data-id");
     let comment = $("#" + id);
     console.log(comment);
-    if (globalId!==id) {
+    if (globalId !== id) {
         count = 0;
         globalId = id;
 
@@ -37,15 +37,15 @@ function collapseComment(e) {
                     '                                    <div class="media-left">\n' +
                     '                                        <a href="#">\n' +
                     '                                            <img style="border-radius: 30px;" class="media-object"\n' +
-                    '                                                 src='+v.authorAvatarUrl +' alt="..." width="60px">\n' +
+                    '                                                 src=' + v.authorAvatarUrl + ' alt="..." width="60px">\n' +
                     '                                        </a>\n' +
                     '                                    </div>\n' +
                     '                                    <div class="media-body" style="line-height: 36px">\n' +
-                    '                                        <h4 class="media-heading">'+v.authorName+'</h4>\n' +
-                    '                                        <span>'+v.content+'</span>\n' +
+                    '                                        <h4 class="media-heading">' + v.authorName + '</h4>\n' +
+                    '                                        <span>' + v.content + '</span>\n' +
                     '                                        <div>\n' +
                     '\n' +
-                    '                                            <span class="pull-right">'+v.createTime+'</span>\n' +
+                    '                                            <span class="pull-right">' + v.createTime + '</span>\n' +
                     '                                        </div>\n' +
                     '\n' +
                     '\n' +
@@ -60,7 +60,7 @@ function collapseComment(e) {
                 comment.append('<div class="form-group" style="margin-top: 10px">\n' +
                     '                                    <input type="text"  class="form-control" id="comment"\n' +
                     '                                           placeholder="评论一下...">\n' +
-                    '                                    <button  onclick="insertTwoComment('+id+')" type="submit" style="margin: 10px 0" class="btn btn-success pull-right">评论\n' +
+                    '                                    <button  onclick="insertTwoComment(' + id + ')" type="submit" style="margin: 10px 0" class="btn btn-success pull-right">评论\n' +
                     '                                    </button>\n' +
                     '                                </div>')
             }
@@ -78,14 +78,13 @@ function insertTwoComment(parentId) {
     let content = $("#comment").val();
 
 
-    extracted(parentId,content,2);
+    extracted(parentId, content, 2);
 
 
 }
 
 
-
-function extracted(parentId,content,type) {
+function extracted(parentId, content, type) {
     $.ajax({
         type: "POST",
         url: "/comment",
@@ -118,3 +117,35 @@ function extracted(parentId,content,type) {
 
     })
 }
+
+
+function selectTag(e) {
+    let tagValue = e.getAttribute('data-tag');
+
+    let val = $("#tag").val();
+    if (val === '') {
+        $("#tag").val(tagValue);
+    } else {
+        if (val.indexOf(tagValue) !== -1) {
+            alert('已添加该标签');
+        } else {
+            $("#tag").val(val + ',' + tagValue);
+
+        }
+    }
+}
+
+
+// function hideTag() {
+//
+//         $("#tag-nav").attr('hidden', 'hidden');
+// }
+
+function showTag() {
+    $("#tag-nav").attr('hidden', null);
+
+}
+
+var el;
+
+
