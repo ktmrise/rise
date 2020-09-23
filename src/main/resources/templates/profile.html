@@ -38,7 +38,7 @@
                                 </a>
                             </div>
                             <div class="media-body">
-                                <a href="" class="media-heading" th:text="${question.title}"
+                                <a th:href="@{/question(questionId=${question.id})}" class="media-heading" th:text="${question.title}"
                                    style="display: block;font-size: 20px;text-decoration:none"></a>
 
                                 <!--                    <span th:text="${question.description}" style="color: #999"></span>-->
@@ -47,8 +47,13 @@
                                          <span th:text="${question.commentCount}"></span>个回复 •
                                     <span th:text="${question.viewCount}"></span> 次浏览  •
                                     <span th:text="${question.createTime}"></span> 发布
-                                    </span>
+                                </span>
+                                <span class="glyphicon glyphicon-pencil" th:if="${session.user!=null}"
+                                      th:unless="${question.authorName!=session.user.name}">
+                <a th:href="@{/publishByQuestionId(questionId=${question.id})}"
 
+                   style="text-decoration: none;margin-left: -6px">编辑</a>
+            </span>
                             </div>
                         </div>
                         <nav aria-label="Page navigation">

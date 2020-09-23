@@ -59,7 +59,8 @@
                 <div style="font-weight: bold;font-size: 16px" class="col-lg-12 col-sm-12 col-md-12"
                      th:text="${question.description}"></div>
                 <hr class="col-lg-12">
-                <span class=" glyphicon glyphicon-tags label label-info"  style="margin-right: 5px;font-size: 13px" th:each="tag :${question.tag.split(',')}" >
+                <span class=" glyphicon glyphicon-tags label label-info" style="margin-right: 5px;font-size: 13px"
+                      th:each="tag :${question.tag.split(',')}">
                     <span th:text="${tag}"></span>
                 </span>
                 <hr>
@@ -163,7 +164,9 @@
                     <h3 style="font-weight: bold;">相关问题</h3>
                     <ul style="list-style: none;margin-left: -39px">
                         <li th:each="relatedQuestion:  ${relatedQuestions}">
-                            <a style="text-decoration: none;font-size: 20px" th:href="@{/question(questionId=${relatedQuestion.id})}" th:text="${relatedQuestion.title}"></a>
+                            <a style="text-decoration: none;font-size: 20px"
+                               th:href="@{/question(questionId=${relatedQuestion.id})}"
+                               th:text="${relatedQuestion.title}"></a>
                         </li>
                     </ul>
                 </div>

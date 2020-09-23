@@ -42,8 +42,8 @@ public class PublishController {
             return "publish";
         }
         String invalidTags = TagsCache.invalidTags(question.getTag());
-        if (!StringUtils.isEmpty(invalidTags)  ) {
-            request.setAttribute("error", "输入的标签不合法"+invalidTags);
+        if (!StringUtils.isEmpty(invalidTags)) {
+            request.setAttribute("error", "输入的标签不合法" + invalidTags);
             return "publish";
         }
         User user = (User) session.getAttribute("user");

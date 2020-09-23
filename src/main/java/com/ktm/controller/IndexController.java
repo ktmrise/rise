@@ -28,7 +28,7 @@ public class IndexController extends BaseController {
     @GetMapping({"/index", "/"})
     public String index(HttpServletRequest request,
                         @RequestParam(name = "current", defaultValue = "1") int current,
-                        @RequestParam(name = "size", defaultValue = "8", required = false) int size) {
+                        @RequestParam(name = "size", defaultValue = "6", required = false) int size) {
 
 
 
