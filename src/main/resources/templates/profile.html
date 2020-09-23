@@ -14,6 +14,8 @@
         background: url("/imgs/bg.jpg") repeat;
     }
 
+
+
 </style>
 <body>
 
@@ -30,52 +32,71 @@
                 <span style="font-size: 25px;font-weight: 700;margin-left: 8px" th:text="${sectionName}"> </span>
             </div>
             <hr>
+            <div class="col-lg-12" th:if="${section=='questions'}">
+                <div class="media" th:each="question : ${questions}">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" th:src="${question.avatarUrl}" alt="..." width="60px">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <a th:href="@{/question(questionId=${question.id})}" class="media-heading"
+                           th:text="${question.title}"
+                           style="display: block;font-size: 20px;text-decoration:none"></a>
 
-                        <div class="media" th:each="question : ${questions}">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object" th:src="${question.avatarUrl}" alt="..." width="60px">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <a th:href="@{/question(questionId=${question.id})}" class="media-heading" th:text="${question.title}"
-                                   style="display: block;font-size: 20px;text-decoration:none"></a>
+                        <!--                    <span th:text="${question.description}" style="color: #999"></span>-->
 
-                                <!--                    <span th:text="${question.description}" style="color: #999"></span>-->
-
-                                <span style="color: #999">
+                        <span style="color: #999">
                                          <span th:text="${question.commentCount}"></span>个回复 •
                                     <span th:text="${question.viewCount}"></span> 次浏览  •
                                     <span th:text="${question.createTime}"></span> 发布
                                 </span>
-                                <span class="glyphicon glyphicon-pencil" th:if="${session.user!=null}"
-                                      th:unless="${question.authorName!=session.user.name}">
+                        <span class="glyphicon glyphicon-pencil" th:if="${session.user!=null}"
+                              th:unless="${question.authorName!=session.user.name}">
                 <a th:href="@{/publishByQuestionId(questionId=${question.id})}"
 
                    style="text-decoration: none;margin-left: -6px">编辑</a>
             </span>
-                            </div>
-                        </div>
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li th:unless="${isContainFirst}">
-                                    <a th:href="@{/index(current=1)}" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li th:if="${current!=1}"><a th:href="@{/index(current=${current-1})}">&lsaquo;</a></li>
-                                <li th:each="page : ${pages}" class="" th:classappend="${page==current}?'active':''"><a
-                                        th:href="@{/index(current=${page})}" th:text="${page}"></a></li>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li th:unless="${isContainFirst}">
+                            <a th:href="@{/index(current=1)}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li th:if="${current!=1}"><a th:href="@{/index(current=${current-1})}">&lsaquo;</a></li>
+                        <li th:each="page : ${pages}" class="" th:classappend="${page==current}?'active':''"><a
+                                th:href="@{/index(current=${page})}" th:text="${page}"></a></li>
 
-                                <li th:if="${current!=total}"><a th:href="@{/index(current=${current+1})}">&rsaquo;</a></li>
+                        <li th:if="${current!=total}"><a th:href="@{/index(current=${current+1})}">&rsaquo;</a></li>
 
-                                <li th:unless="${isContainEnd}">
-                                    <a th:href="@{/index(current=${total})}" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                        <li th:unless="${isContainEnd}">
+                            <a th:href="@{/index(current=${total})}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-lg-12" th:if="${section=='replies'}">
+                <div th:each=" unreadNotification :   ${unreadNotifications}">
+
+                    <p th:if="${unreadNotification.type==1}">
+                        <a href="#" th:text="${unreadNotification.notifierName}" style="text-decoration: none"></a>回复了问题
+                        <a th:href="@{'/notification/'+${  unreadNotification.id}}"
+                           th:text="${unreadNotification.titleOrContent}" style="text-decoration: none"></a>
+                    </p>
+                    <p th:if="${unreadNotification.type==0}">
+                        <a href="#" th:text="${unreadNotification.notifierName}" style="text-decoration: none"></a>回复了评论
+                        <a th:href="@{'/notification/'+${  unreadNotification.id}}"
+                           th:text="${unreadNotification.titleOrContent}" style="text-decoration: none"></a>
+                    </p>
+
+                </div>
+            </div>
 
         </div>
 
@@ -83,9 +104,10 @@
         <div class="col-lg-4 col-sm-12 col-md-3" style="margin-left: 100px">
 
             <div class="list-group" style="margin-top: 20px">
-                <a href="/profile/questions" class="list-group-item" th:classappend="${section=='questions'}?'active':''">我的问题</a>
+                <a href="/profile/questions" class="list-group-item"
+                   th:classappend="${section=='questions'}?'active':''">我的问题</a>
                 <a href="/profile/replies" class="list-group-item" th:classappend="${section=='replies'}?'active':''">最新回复
-                    <span class="badge">14</span>
+                    <span class="badge" th:text="${unreadCount}"></span>
                 </a>
 
             </div>
