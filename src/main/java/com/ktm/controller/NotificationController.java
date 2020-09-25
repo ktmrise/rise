@@ -37,7 +37,7 @@ public class NotificationController {
         }
 
         Notification notification = notificationService.read(id, user);
-            return "redirect:/question?questionId=" + notification.getOuterId();
+        return "redirect:/question?questionId=" + notification.getOuterId();
 
 
     }

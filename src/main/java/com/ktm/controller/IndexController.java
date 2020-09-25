@@ -5,12 +5,12 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ktm.dto.NotificationDTO;
 import com.ktm.dto.QuestionDTO;
+import com.ktm.entity.User;
 import com.ktm.service.INotificationService;
 import com.ktm.service.IQuestionService;
 import com.ktm.service.IUserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
@@ -36,15 +36,17 @@ public class IndexController extends BaseController {
                         @RequestParam(name = "current", defaultValue = "1") int current,
                         @RequestParam(name = "size", defaultValue = "6", required = false) int size) {
 
-
+        User user = (User) request.getSession().getAttribute("user");
 
         IPage<QuestionDTO> result = questionService.paging(new Page<QuestionDTO>(current, size));
 
         //分页信息
         pageData(request, current, result);
-        List<NotificationDTO> unreadNotifications=  notificationService.selectUnreadNotifications(new Page<>(current, size));
-
-        request.setAttribute("unreadCount",unreadNotifications.size());
+        List<NotificationDTO> unreadNotifications;
+        if (user!=null) {
+            unreadNotifications = notificationService.selectUnreadNotifications(null, user.getId());
+            request.setAttribute("unreadCount",unreadNotifications.size());
+        }
         return "index";
     }
 

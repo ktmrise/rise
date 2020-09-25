@@ -28,9 +28,10 @@ public class NotificationServiceImpl extends ServiceImpl<NotificationMapper, Not
     private NotificationMapper notificationMapper;
 
     @Override
-    public List<NotificationDTO> selectUnreadNotifications(Page<Object> page) {
+    public List<NotificationDTO> selectUnreadNotifications(Page<Object> page, Integer userId) {
         QueryWrapper<Notification> wrapper = new QueryWrapper<>();
         wrapper.eq("status", 0);
+        wrapper.eq("receiver", userId);
         return notificationMapper.selectUnreadNotifications(page, wrapper);
     }
 

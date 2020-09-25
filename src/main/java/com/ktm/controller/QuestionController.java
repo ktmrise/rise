@@ -1,20 +1,15 @@
 package com.ktm.controller;
 
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ktm.dto.CommentDTO;
 import com.ktm.dto.NotificationDTO;
 import com.ktm.dto.QuestionDTO;
-import com.ktm.entity.Comment;
 import com.ktm.entity.Question;
+import com.ktm.entity.User;
 import com.ktm.service.ICommentService;
 import com.ktm.service.INotificationService;
 import com.ktm.service.IQuestionService;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -46,6 +41,7 @@ public class QuestionController {
 
     @GetMapping("/question")
     public String detail(@RequestParam(name = "questionId") Integer id, HttpServletRequest request) {
+        User user = (User) request.getSession().getAttribute("user");
 
         QuestionDTO questionDTO = questionService.selectQuestionById(id);
         List<Question> relatedQuestions = questionService.selectRelatedQuestions(id);
@@ -53,9 +49,14 @@ public class QuestionController {
         request.setAttribute("comments", commentDTOS);
         request.setAttribute("question", questionDTO);
         request.setAttribute("relatedQuestions", relatedQuestions);
-        List<NotificationDTO> unreadNotifications=  notificationService.selectUnreadNotifications(null);
+        List<NotificationDTO> unreadNotifications;
+        if (user!=null) {
+            unreadNotifications = notificationService.selectUnreadNotifications(null, user.getId());
+            request.setAttribute("unreadCount",unreadNotifications.size());
+        }
 
-        request.setAttribute("unreadCount",unreadNotifications.size());
+
+
         return "question";
     }
 }

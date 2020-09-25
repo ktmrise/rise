@@ -36,10 +36,10 @@ public class ProfileController extends BaseController {
     public String profile(@PathVariable(name = "action") String action, HttpServletRequest request,
                           @RequestParam(name = "current", defaultValue = "1") int current,
                           @RequestParam(name = "size", defaultValue = "6", required = false) int size) {
+        User user = (User) request.getSession().getAttribute("user");
         if ("questions".equals(action)) {
             request.setAttribute("section", "questions");
             request.setAttribute("sectionName", "我的提问");
-            User user = (User) request.getSession().getAttribute("user");
             IPage<QuestionDTO> result = questionService.pagingByUserId(new Page<QuestionDTO>(current, size), user.getId());
             //分页信息
             pageData(request, current, result);
@@ -47,12 +47,15 @@ public class ProfileController extends BaseController {
             request.setAttribute("section", "replies");
             request.setAttribute("sectionName", "最新回复");
 
-
+            List<NotificationDTO> unreadNotifications;
             //查找未读通知
-         List<NotificationDTO> unreadNotifications=  notificationService.selectUnreadNotifications(new Page<>(current, size));
+            if (user!=null) {
+                unreadNotifications = notificationService.selectUnreadNotifications(null, user.getId());
+                request.setAttribute("unreadCount",unreadNotifications.size());
+                request.setAttribute("unreadNotifications",unreadNotifications);
+            }
 
-            request.setAttribute("unreadCount",unreadNotifications.size());
-            request.setAttribute("unreadNotifications",unreadNotifications);
+
         }
 
 

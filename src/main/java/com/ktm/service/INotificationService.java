@@ -18,7 +18,7 @@ import java.util.List;
  */
 public interface INotificationService extends IService<Notification> {
 
-    List<NotificationDTO> selectUnreadNotifications(Page<Object> page);
+    List<NotificationDTO> selectUnreadNotifications(Page<Object> page, Integer id);
 
     Notification read(Integer id, User user);
 }

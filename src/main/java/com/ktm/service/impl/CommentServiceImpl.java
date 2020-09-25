@@ -61,7 +61,10 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
             } else {
                 commentMapper.insert(comment);
                 questionMapper.addCommentCount(dbQuestion.getId());
-                createNotification(comment, NotificationTypeEnum.REPLY_QUESTION.getType(), dbQuestion.getCreator());
+                if (!comment.getCommentator().equals(dbQuestion.getCreator())) {
+                    createNotification(comment, NotificationTypeEnum.REPLY_QUESTION.getType(), dbQuestion.getCreator());
+                }
+
             }
         }
 
@@ -73,7 +76,10 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
             }
             commentMapper.insert(comment);
             commentMapper.addCommentCount(dbComment.getId());
-            createNotification(comment, NotificationTypeEnum.REPLY_COMMMENT.getType(), dbComment.getCommentator());
+            if (!comment.getCommentator().equals(dbComment.getCommentator())) {
+                createNotification(comment, NotificationTypeEnum.REPLY_COMMMENT.getType(), dbComment.getCommentator());
+
+            }
 
         }
 
