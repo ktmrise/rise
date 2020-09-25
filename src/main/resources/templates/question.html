@@ -118,6 +118,8 @@
                                 <span class="glyphicon glyphicon-thumbs-up" style="font-size: 15px">
                                </span>
                                 <span th:text="${comment.commentCount}" onclick="collapseComment(this)"
+                                      data-collapse=""
+                                      collapse-count="true"
                                       class="glyphicon glyphicon-comment comment"
                                       th:data-id="${comment.id}">
                                 </span>

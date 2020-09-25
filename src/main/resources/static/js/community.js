@@ -9,23 +9,24 @@ function reply() {
     extracted(questionId, content, 1);
 }
 
-let count = 0;
-let globalId = '';
+
 
 function collapseComment(e) {
     let id = e.getAttribute("data-id");
     let comment = $("#" + id);
-    console.log(comment);
-    if (globalId !== id) {
-        count = 0;
-        globalId = id;
 
-    }
+    let collapse = e.getAttribute('data-collapse');
+    let count = e.getAttribute('collapse-count');
+    console.log(count);
+    console.log(collapse);
 
-    if (comment.hasClass("in")) {
+    if (collapse==='in') {
         comment.removeClass('in');
+        e.setAttribute('data-collapse', '');
     } else {
         comment.addClass("in");
+
+        e.setAttribute("data-collapse", 'in');
         //获取二级评论
         $.getJSON('/selectTwoComments', {id: id}, function (response) {
 
@@ -55,7 +56,7 @@ function collapseComment(e) {
                     '                                </div>';
 
             });
-            if (count === 0) {
+            if (count === 'true') {
                 comment.append(html);
                 comment.append('<div class="form-group" style="margin-top: 10px">\n' +
                     '                                    <input type="text"  class="form-control" id="comment"\n' +
@@ -63,8 +64,9 @@ function collapseComment(e) {
                     '                                    <button  onclick="insertTwoComment(' + id + ')" type="submit" style="margin: 10px 0" class="btn btn-success pull-right">评论\n' +
                     '                                    </button>\n' +
                     '                                </div>')
+                e.setAttribute('collapse-count', 'false');
             }
-            count++;
+
 
         });
 
