@@ -1,0 +1,30 @@
+2020-09-26 18:10:25.500  INFO 16556 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 16556 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-09-26 18:10:25.500  INFO 16556 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-09-26 18:10:26.596  INFO 16556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-26 18:10:26.596  INFO 16556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-26 18:10:26.596  INFO 16556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-09-26 18:10:26.606  INFO 16556 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-26 18:10:26.606  INFO 16556 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-26 18:10:26.606  INFO 16556 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-26 18:10:26.616  INFO 16556 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-26 18:10:26.686  INFO 16556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-26 18:10:26.686  INFO 16556 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1106 ms
+2020-09-26 18:10:28.237  INFO 16556 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-26 18:10:28.297  INFO 16556 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-26 18:10:28.467  INFO 16556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-26 18:10:28.467  INFO 16556 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 3.4 seconds (JVM running for 4.559)
+2020-09-26 18:11:47.329  INFO 9252 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 9252 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-09-26 18:11:47.329  INFO 9252 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-09-26 18:11:48.434  INFO 9252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-26 18:11:48.454  INFO 9252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-26 18:11:48.454  INFO 9252 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-09-26 18:11:48.454  INFO 9252 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-26 18:11:48.454  INFO 9252 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-26 18:11:48.454  INFO 9252 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-26 18:11:48.454  INFO 9252 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-26 18:11:48.534  INFO 9252 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-26 18:11:48.534  INFO 9252 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1133 ms
+2020-09-26 18:11:50.406  INFO 9252 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-26 18:11:50.456  INFO 9252 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-26 18:11:50.636  INFO 9252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-26 18:11:50.636  INFO 9252 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 3.781 seconds (JVM running for 5.08)
