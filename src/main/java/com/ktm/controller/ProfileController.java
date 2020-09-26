@@ -35,7 +35,7 @@ public class ProfileController extends BaseController {
     @GetMapping("/profile/{action}")
     public String profile(@PathVariable(name = "action") String action, HttpServletRequest request,
                           @RequestParam(name = "current", defaultValue = "1") int current,
-                          @RequestParam(name = "size", defaultValue = "6", required = false) int size) {
+                          @RequestParam(name = "size", defaultValue = "7", required = false) int size) {
         User user = (User) request.getSession().getAttribute("user");
         if ("questions".equals(action)) {
             request.setAttribute("section", "questions");
