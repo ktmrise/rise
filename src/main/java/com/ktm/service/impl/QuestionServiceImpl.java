@@ -39,8 +39,10 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
     }
 
     @Override
-    public IPage<QuestionDTO> paging(Page page) {
-        return questionMapper.selectPages(page);
+    public IPage<QuestionDTO> paging(Page page, String keyword) {
+        LambdaQueryWrapper<Question> wrapper = new LambdaQueryWrapper<>();
+        wrapper.like(keyword != null, Question::getTitle, keyword);
+        return questionMapper.selectPages(page,wrapper);
     }
 
     @Override

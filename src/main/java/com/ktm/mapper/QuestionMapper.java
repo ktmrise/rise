@@ -1,5 +1,6 @@
 package com.ktm.mapper;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Constants;
@@ -11,7 +12,7 @@ import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author ktm
@@ -19,9 +20,9 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface QuestionMapper extends BaseMapper<Question> {
 
-    IPage<QuestionDTO> selectPages(Page page);
+    IPage<QuestionDTO> selectPages(Page page, @Param(Constants.WRAPPER) LambdaQueryWrapper<Question> wrapper);
 
-    IPage<QuestionDTO> selectPagesByUserId(Page page,@Param(Constants.WRAPPER)   QueryWrapper wrapper);
+    IPage<QuestionDTO> selectPagesByUserId(Page page, @Param(Constants.WRAPPER) QueryWrapper wrapper);
 
     QuestionDTO selectQuestionById(Integer id);
 

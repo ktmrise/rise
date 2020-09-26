@@ -34,11 +34,12 @@ public class IndexController extends BaseController {
     @GetMapping({"/index", "/"})
     public String index(HttpServletRequest request,
                         @RequestParam(name = "current", defaultValue = "1") int current,
-                        @RequestParam(name = "size", defaultValue = "6", required = false) int size) {
+                        @RequestParam(name = "size", defaultValue = "6", required = false) int size,
+                        String keyword) {
 
         User user = (User) request.getSession().getAttribute("user");
 
-        IPage<QuestionDTO> result = questionService.paging(new Page<QuestionDTO>(current, size));
+        IPage<QuestionDTO> result = questionService.paging(new Page<QuestionDTO>(current, size),keyword);
 
         //分页信息
         pageData(request, current, result);
@@ -47,6 +48,7 @@ public class IndexController extends BaseController {
             unreadNotifications = notificationService.selectUnreadNotifications(null, user.getId());
             request.setAttribute("unreadCount",unreadNotifications.size());
         }
+        request.setAttribute("keyword",keyword);
         return "index";
     }
 
