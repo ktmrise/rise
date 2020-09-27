@@ -875,3 +875,635 @@ java.sql.SQLException: Access denied for user 'root'@'111.79.3.57' (using passwo
 2020-09-27 10:26:16.765 DEBUG 18412 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
 2020-09-27 10:26:16.766 DEBUG 18412 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
 2020-09-27 10:26:16.807 DEBUG 18412 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 12:35:09.436  INFO 17144 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 17144 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-09-27 12:35:09.446  INFO 17144 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-09-27 12:35:10.592  INFO 17144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-09-27 12:35:10.602  INFO 17144 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-27 12:35:10.602  INFO 17144 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-09-27 12:35:10.602  INFO 17144 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-27 12:35:10.602  INFO 17144 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-27 12:35:10.602  INFO 17144 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-27 12:35:10.612  INFO 17144 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-27 12:35:10.692  INFO 17144 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-27 12:35:10.692  INFO 17144 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1177 ms
+2020-09-27 12:35:12.247  INFO 17144 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-27 12:35:12.307  INFO 17144 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-27 12:35:12.464  INFO 17144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-09-27 12:35:12.474  INFO 17144 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 3.445 seconds (JVM running for 4.547)
+2020-09-27 12:35:13.626  INFO 17144 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-27 12:35:13.626  INFO 17144 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-27 12:35:13.636  INFO 17144 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-09-27 12:35:13.769  INFO 17144 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-27 12:35:14.132  INFO 17144 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-27 12:35:14.177 DEBUG 17144 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 12:35:14.194 DEBUG 17144 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 12:35:14.238 DEBUG 17144 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 12:35:14.239 DEBUG 17144 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 12:35:14.268 DEBUG 17144 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 12:35:24.348  INFO 17144 --- [http-nio-8887-exec-3] com.ktm.provider.GithubProvider          : c4a1dd59b87d521ca0a9a6d0db45f9ee53002a61
+2020-09-27 12:35:39.968 ERROR 17144 --- [http-nio-8887-exec-3] com.ktm.provider.GithubProvider          : githubUser获取出错
+2020-09-27 12:35:40.003 DEBUG 17144 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 12:35:40.004 DEBUG 17144 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 12:35:40.023 DEBUG 17144 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 12:35:40.024 DEBUG 17144 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 12:35:40.047 DEBUG 17144 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 12:35:47.515  INFO 17144 --- [http-nio-8887-exec-5] com.ktm.provider.GithubProvider          : 4dcaf534b80b071e3b62f04abfa80af30bed913b
+2020-09-27 12:35:49.875  INFO 17144 --- [http-nio-8887-exec-5] com.ktm.provider.GithubProvider          : rw
+2020-09-27 12:35:49.908 DEBUG 17144 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (account_id = ?) 
+2020-09-27 12:35:49.909 DEBUG 17144 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 71860123(Long)
+2020-09-27 12:35:49.928 DEBUG 17144 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:49.939 DEBUG 17144 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:49.940 DEBUG 17144 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:49.958 DEBUG 17144 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:49.961 DEBUG 17144 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 12:35:49.961 DEBUG 17144 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 12:35:49.979 DEBUG 17144 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 12:35:49.980 DEBUG 17144 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 12:35:50.003 DEBUG 17144 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 12:35:50.005 DEBUG 17144 --- [http-nio-8887-exec-6] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-09-27 12:35:50.006 DEBUG 17144 --- [http-nio-8887-exec-6] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 4(Integer)
+2020-09-27 12:35:50.024 DEBUG 17144 --- [http-nio-8887-exec-6] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-09-27 12:35:53.544 DEBUG 17144 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:53.544 DEBUG 17144 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:53.562 DEBUG 17144 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:53.610 DEBUG 17144 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:53.611 DEBUG 17144 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:53.629 DEBUG 17144 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:53.632 DEBUG 17144 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:53.633 DEBUG 17144 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:53.644 DEBUG 17144 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:53.644 DEBUG 17144 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:53.655 DEBUG 17144 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:53.662 DEBUG 17144 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:53.730 DEBUG 17144 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:53.732 DEBUG 17144 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:53.733 DEBUG 17144 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:53.734 DEBUG 17144 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:53.749 DEBUG 17144 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:53.751 DEBUG 17144 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:53.752 DEBUG 17144 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:53.754 DEBUG 17144 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:53.754 DEBUG 17144 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:53.755 DEBUG 17144 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:53.759 DEBUG 17144 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:53.759 DEBUG 17144 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:53.770 DEBUG 17144 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:53.777 DEBUG 17144 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:53.788 DEBUG 17144 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:53.813 DEBUG 17144 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:53.814 DEBUG 17144 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:53.832 DEBUG 17144 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:53.857 DEBUG 17144 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:53.858 DEBUG 17144 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:53.877 DEBUG 17144 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:53.959 DEBUG 17144 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:53.959 DEBUG 17144 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:53.977 DEBUG 17144 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:53.989 DEBUG 17144 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:53.989 DEBUG 17144 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:53.993 DEBUG 17144 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:35:53.994 DEBUG 17144 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:35:54.011 DEBUG 17144 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:35:54.013 DEBUG 17144 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:36:16.651 DEBUG 17144 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:36:16.652 DEBUG 17144 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:36:16.671 DEBUG 17144 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:36:16.673 DEBUG 17144 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 12:36:16.674 DEBUG 17144 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 12:36:16.693 DEBUG 17144 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 12:36:16.693 DEBUG 17144 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 12:36:16.713 DEBUG 17144 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 12:36:16.715 DEBUG 17144 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-09-27 12:36:16.715 DEBUG 17144 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 4(Integer)
+2020-09-27 12:36:16.732 DEBUG 17144 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-09-27 12:40:19.444  INFO 8280 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 8280 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-09-27 12:40:19.446  INFO 8280 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-09-27 12:40:20.390  INFO 8280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-09-27 12:40:20.400  INFO 8280 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-27 12:40:20.400  INFO 8280 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-09-27 12:40:20.400  INFO 8280 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-27 12:40:20.400  INFO 8280 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-27 12:40:20.400  INFO 8280 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-27 12:40:20.400  INFO 8280 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-27 12:40:20.480  INFO 8280 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-27 12:40:20.480  INFO 8280 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 977 ms
+2020-09-27 12:40:21.805  INFO 8280 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-27 12:40:21.855  INFO 8280 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-27 12:40:22.022  INFO 8280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-09-27 12:40:22.024  INFO 8280 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 2.996 seconds (JVM running for 3.998)
+2020-09-27 12:40:25.430  INFO 8280 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-27 12:40:25.430  INFO 8280 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-27 12:40:25.435  INFO 8280 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-09-27 12:40:25.514  INFO 8280 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-27 12:40:25.958  INFO 8280 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-27 12:40:25.966 DEBUG 8280 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:40:25.985 DEBUG 8280 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:40:26.033 DEBUG 8280 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:40:26.075 DEBUG 8280 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 12:40:26.075 DEBUG 8280 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 12:40:26.114 DEBUG 8280 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 12:40:26.114 DEBUG 8280 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 12:40:26.149 DEBUG 8280 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 12:40:26.152 DEBUG 8280 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-09-27 12:40:26.153 DEBUG 8280 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 4(Integer)
+2020-09-27 12:40:26.184 DEBUG 8280 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-09-27 12:40:27.991 DEBUG 8280 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:40:27.991 DEBUG 8280 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:40:28.022 DEBUG 8280 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:00.822 DEBUG 8280 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:00.823 DEBUG 8280 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:00.833 DEBUG 8280 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:00.833 DEBUG 8280 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:00.843 DEBUG 8280 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:00.865 DEBUG 8280 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:05.990 DEBUG 8280 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:05.991 DEBUG 8280 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.023 DEBUG 8280 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.081 DEBUG 8280 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.082 DEBUG 8280 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.100 DEBUG 8280 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.100 DEBUG 8280 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.102 DEBUG 8280 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.103 DEBUG 8280 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.107 DEBUG 8280 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.107 DEBUG 8280 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.108 DEBUG 8280 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.108 DEBUG 8280 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.109 DEBUG 8280 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.109 DEBUG 8280 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.113 DEBUG 8280 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.119 DEBUG 8280 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.122 DEBUG 8280 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.129 DEBUG 8280 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.130 DEBUG 8280 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.134 DEBUG 8280 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.149 DEBUG 8280 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.149 DEBUG 8280 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.181 DEBUG 8280 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.226 DEBUG 8280 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.227 DEBUG 8280 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.231 DEBUG 8280 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.232 DEBUG 8280 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.245 DEBUG 8280 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.250 DEBUG 8280 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.250 DEBUG 8280 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.252 DEBUG 8280 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.252 DEBUG 8280 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.262 DEBUG 8280 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.269 DEBUG 8280 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.279 DEBUG 8280 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.300 DEBUG 8280 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.300 DEBUG 8280 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.300 DEBUG 8280 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.300 DEBUG 8280 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.300 DEBUG 8280 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.300 DEBUG 8280 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.302 DEBUG 8280 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.302 DEBUG 8280 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.306 DEBUG 8280 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.307 DEBUG 8280 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.319 DEBUG 8280 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.319 DEBUG 8280 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.323 DEBUG 8280 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.324 DEBUG 8280 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.332 DEBUG 8280 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.362 DEBUG 8280 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.362 DEBUG 8280 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.393 DEBUG 8280 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.425 DEBUG 8280 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.425 DEBUG 8280 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.444 DEBUG 8280 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.493 DEBUG 8280 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.493 DEBUG 8280 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.499 DEBUG 8280 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.500 DEBUG 8280 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.519 DEBUG 8280 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.524 DEBUG 8280 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:06.547 DEBUG 8280 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:41:06.547 DEBUG 8280 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:41:06.573 DEBUG 8280 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:41:55.774  INFO 9556 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 9556 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-09-27 12:41:55.777  INFO 9556 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-09-27 12:41:56.734  INFO 9556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-09-27 12:41:56.741  INFO 9556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-27 12:41:56.742  INFO 9556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-09-27 12:41:56.743  INFO 9556 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-27 12:41:56.743  INFO 9556 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-27 12:41:56.743  INFO 9556 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-27 12:41:56.746  INFO 9556 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-27 12:41:56.818  INFO 9556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-27 12:41:56.818  INFO 9556 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 976 ms
+2020-09-27 12:41:58.215  INFO 9556 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-27 12:41:58.275  INFO 9556 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-27 12:41:58.435  INFO 9556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-09-27 12:41:58.435  INFO 9556 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 3.111 seconds (JVM running for 4.137)
+2020-09-27 12:42:02.334  INFO 9556 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-27 12:42:02.335  INFO 9556 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-27 12:42:02.341  INFO 9556 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-09-27 12:42:02.411  INFO 9556 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-27 12:42:02.697  INFO 9556 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-27 12:42:02.707 DEBUG 9556 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:42:02.726 DEBUG 9556 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:42:02.762 DEBUG 9556 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:42:02.806 DEBUG 9556 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 12:42:02.807 DEBUG 9556 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 12:42:02.834 DEBUG 9556 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 12:42:02.835 DEBUG 9556 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 12:42:02.857 DEBUG 9556 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 12:42:02.860 DEBUG 9556 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-09-27 12:42:02.861 DEBUG 9556 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 4(Integer)
+2020-09-27 12:42:02.880 DEBUG 9556 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-09-27 12:42:03.220 DEBUG 9556 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:42:03.220 DEBUG 9556 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:42:03.220 DEBUG 9556 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:42:03.220 DEBUG 9556 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:42:03.220 DEBUG 9556 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:42:03.220 DEBUG 9556 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:42:03.240 DEBUG 9556 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:42:03.242 DEBUG 9556 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:42:03.242 DEBUG 9556 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:42:03.244 DEBUG 9556 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:42:03.247 DEBUG 9556 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:42:03.263 DEBUG 9556 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:42:03.363 DEBUG 9556 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:42:03.363 DEBUG 9556 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:42:03.370 DEBUG 9556 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:42:03.370 DEBUG 9556 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:42:03.383 DEBUG 9556 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:42:03.384 DEBUG 9556 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:42:03.384 DEBUG 9556 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:42:03.384 DEBUG 9556 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:42:03.384 DEBUG 9556 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:42:03.397 DEBUG 9556 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:42:03.403 DEBUG 9556 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:42:03.407 DEBUG 9556 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:42:05.880 DEBUG 9556 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:42:05.881 DEBUG 9556 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:42:05.900 DEBUG 9556 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:47:00.824  INFO 336 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 336 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-09-27 12:47:00.834  INFO 336 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-09-27 12:47:01.754  INFO 336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-09-27 12:47:01.761  INFO 336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-27 12:47:01.761  INFO 336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-09-27 12:47:01.762  INFO 336 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-27 12:47:01.762  INFO 336 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-27 12:47:01.762  INFO 336 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-27 12:47:01.765  INFO 336 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-27 12:47:01.840  INFO 336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-27 12:47:01.841  INFO 336 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 947 ms
+2020-09-27 12:47:03.086  INFO 336 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-27 12:47:03.136  INFO 336 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-27 12:47:03.296  INFO 336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-09-27 12:47:03.296  INFO 336 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 2.839 seconds (JVM running for 3.851)
+2020-09-27 12:47:05.000  INFO 336 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-27 12:47:05.001  INFO 336 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-27 12:47:05.008  INFO 336 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-09-27 12:47:05.131  INFO 336 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-27 12:47:05.541  INFO 336 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-27 12:47:05.553 DEBUG 336 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:47:05.586 DEBUG 336 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:47:05.636 DEBUG 336 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:47:05.693 DEBUG 336 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 12:47:05.694 DEBUG 336 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 12:47:05.723 DEBUG 336 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 12:47:05.723 DEBUG 336 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 12:47:05.751 DEBUG 336 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 12:47:05.754 DEBUG 336 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-09-27 12:47:05.755 DEBUG 336 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 4(Integer)
+2020-09-27 12:47:05.777 DEBUG 336 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-09-27 12:47:08.007 DEBUG 336 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:47:08.008 DEBUG 336 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:47:08.031 DEBUG 336 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:52:59.999  INFO 11424 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 11424 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-09-27 12:53:00.009  INFO 11424 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-09-27 12:53:00.958  INFO 11424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-09-27 12:53:00.964  INFO 11424 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-27 12:53:00.964  INFO 11424 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-09-27 12:53:00.965  INFO 11424 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-27 12:53:00.966  INFO 11424 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-27 12:53:00.966  INFO 11424 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-27 12:53:00.969  INFO 11424 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-27 12:53:01.042  INFO 11424 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-27 12:53:01.043  INFO 11424 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 974 ms
+2020-09-27 12:53:02.329  INFO 11424 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-27 12:53:02.379  INFO 11424 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-27 12:53:02.529  INFO 11424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-09-27 12:53:02.531  INFO 11424 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 2.853 seconds (JVM running for 3.83)
+2020-09-27 12:53:06.004  INFO 11424 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-27 12:53:06.004  INFO 11424 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-27 12:53:06.009  INFO 11424 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-09-27 12:53:06.084  INFO 11424 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-27 12:53:06.433  INFO 11424 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-27 12:53:06.440 DEBUG 11424 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:53:06.459 DEBUG 11424 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:53:06.499 DEBUG 11424 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:53:11.323 DEBUG 11424 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:53:11.324 DEBUG 11424 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:53:11.347 DEBUG 11424 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 12:53:11.382 DEBUG 11424 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 12:53:11.382 DEBUG 11424 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 12:53:11.412 DEBUG 11424 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 12:53:11.412 DEBUG 11424 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 12:53:11.437 DEBUG 11424 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 12:53:11.440 DEBUG 11424 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-09-27 12:53:11.441 DEBUG 11424 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 4(Integer)
+2020-09-27 12:53:11.462 DEBUG 11424 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-09-27 12:53:13.408 DEBUG 11424 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 12:53:13.408 DEBUG 11424 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 12:53:13.430 DEBUG 11424 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:12:38.420  INFO 13808 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 13808 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-09-27 13:12:38.420  INFO 13808 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-09-27 13:12:39.377  INFO 13808 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-09-27 13:12:39.387  INFO 13808 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-27 13:12:39.387  INFO 13808 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-09-27 13:12:39.387  INFO 13808 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-27 13:12:39.387  INFO 13808 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-27 13:12:39.387  INFO 13808 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-27 13:12:39.397  INFO 13808 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-27 13:12:39.467  INFO 13808 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-27 13:12:39.467  INFO 13808 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 987 ms
+2020-09-27 13:12:40.813  INFO 13808 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-27 13:12:40.863  INFO 13808 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-27 13:12:41.026  INFO 13808 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-09-27 13:12:41.029  INFO 13808 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 2.966 seconds (JVM running for 4.039)
+2020-09-27 13:12:45.105  INFO 13808 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-27 13:12:45.105  INFO 13808 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-27 13:12:45.109  INFO 13808 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-09-27 13:12:45.173  INFO 13808 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-27 13:12:45.490  INFO 13808 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-27 13:12:45.498 DEBUG 13808 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:12:45.519 DEBUG 13808 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:12:45.559 DEBUG 13808 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:12:58.807 DEBUG 13808 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:12:58.807 DEBUG 13808 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:12:58.808 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:12:58.809 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:12:58.828 DEBUG 13808 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:12:58.831 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.263 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.263 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.286 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.319 ERROR 13808 --- [http-nio-8887-exec-6] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8887-exec-6] Exception processing template "publish": An error happened during template parsing (template: "class path resource [templates/publish.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/publish.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_251]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_251]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_251]
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "selectTagCategoryStat>8" (template: "publish" - line 115, col 33)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "selectTagCategoryStat>8" (template: "publish" - line 115, col 33)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.StandaloneElementTag.beHandled(StandaloneElementTag.java:228) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	... 50 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1013E: Cannot compare instances of class org.thymeleaf.engine.IterationStatusVar and class java.lang.Integer
+	at org.springframework.expression.spel.support.StandardTypeComparator.compare(StandardTypeComparator.java:112) ~[spring-expression-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.expression.spel.ast.OpGT.getValueInternal(OpGT.java:96) ~[spring-expression-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.expression.spel.ast.OpGT.getValueInternal(OpGT.java:37) ~[spring-expression-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	... 77 common frames omitted
+
+2020-09-27 13:16:01.323 ERROR 13808 --- [http-nio-8887-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/publish.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1013E: Cannot compare instances of class org.thymeleaf.engine.IterationStatusVar and class java.lang.Integer
+	at org.springframework.expression.spel.support.StandardTypeComparator.compare(StandardTypeComparator.java:112) ~[spring-expression-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.expression.spel.ast.OpGT.getValueInternal(OpGT.java:96) ~[spring-expression-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.expression.spel.ast.OpGT.getValueInternal(OpGT.java:37) ~[spring-expression-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112) ~[spring-expression-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337) ~[spring-expression-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.StandardIfTagProcessor.isVisible(StandardIfTagProcessor.java:59) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.StandaloneElementTag.beHandled(StandaloneElementTag.java:228) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:282) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.Model.process(Model.java:290) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:367) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:221) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257) ~[attoparser-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_251]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_251]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_251]
+
+2020-09-27 13:16:01.339 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.339 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.365 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.375 DEBUG 13808 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.377 DEBUG 13808 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.394 DEBUG 13808 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.395 DEBUG 13808 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.395 DEBUG 13808 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.395 DEBUG 13808 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.396 DEBUG 13808 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.396 DEBUG 13808 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.400 DEBUG 13808 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.408 DEBUG 13808 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.408 DEBUG 13808 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.412 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.412 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.415 DEBUG 13808 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.417 DEBUG 13808 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.421 DEBUG 13808 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.432 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.441 DEBUG 13808 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.482 DEBUG 13808 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.483 DEBUG 13808 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.506 DEBUG 13808 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.566 DEBUG 13808 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.566 DEBUG 13808 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.577 DEBUG 13808 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.578 DEBUG 13808 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.589 DEBUG 13808 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.599 DEBUG 13808 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.613 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.614 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.618 DEBUG 13808 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.621 DEBUG 13808 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.640 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.647 DEBUG 13808 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.794 DEBUG 13808 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.795 DEBUG 13808 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.795 DEBUG 13808 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.796 DEBUG 13808 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.796 DEBUG 13808 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.796 DEBUG 13808 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.806 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.807 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.811 DEBUG 13808 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.812 DEBUG 13808 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.814 DEBUG 13808 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.816 DEBUG 13808 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.817 DEBUG 13808 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.826 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.841 DEBUG 13808 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.875 DEBUG 13808 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.876 DEBUG 13808 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.897 DEBUG 13808 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:01.926 DEBUG 13808 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:01.927 DEBUG 13808 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:01.951 DEBUG 13808 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:02.034 DEBUG 13808 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:02.034 DEBUG 13808 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:02.042 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:02.043 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:02.055 DEBUG 13808 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:02.066 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:02.078 DEBUG 13808 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:02.078 DEBUG 13808 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:02.099 DEBUG 13808 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:16.621 DEBUG 13808 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:16.621 DEBUG 13808 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:16.623 DEBUG 13808 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:16:16.623 DEBUG 13808 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:16:16.641 DEBUG 13808 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:16:16.644 DEBUG 13808 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:18:34.568 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:18:34.568 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:18:34.592 DEBUG 13808 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:20:49.950 DEBUG 13808 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:20:49.951 DEBUG 13808 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:20:49.972 DEBUG 13808 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:22:04.555 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 13:22:04.556 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 13:22:04.575 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1

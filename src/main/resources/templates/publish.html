@@ -107,8 +107,8 @@
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane  tagItem"
                              th:id="${selectTagCategory.categoryName}"
-                             th:each="selectTagCategory : ${tags}">
-                            <a class=" glyphicon glyphicon-tags label-info label tag"
+                             th:each="selectTagCategory  : ${tags}">
+                            <a style="display: inline-block" class=" glyphicon glyphicon-tags label-info label tag"
                                th:each="tagName : ${selectTagCategory.tagNames}">
                                 <span onclick="selectTag(this)" th:data-tag="${tagName}" th:text="${tagName}"></span>
                             </a>
