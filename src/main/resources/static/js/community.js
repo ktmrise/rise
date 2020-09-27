@@ -106,7 +106,7 @@ function extracted(parentId, content, type) {
                     let isAccepted = confirm(response.message);
                     if (isAccepted) {
                         localStorage.setItem("close", "true");
-                        window.open("https://github.com/login/oauth/authorize?client_id=51a6b073b4b9e92a2159&redirect_uri=http://localhost:8887/callback&scope=user&state=1"
+                        window.open("https://github.com/login/oauth/authorize?client_id=51a6b073b4b9e92a2159&redirect_uri=http://106.75.145.192/callback&scope=user&state=1"
                         );
                     }
                 } else {

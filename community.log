@@ -1507,3 +1507,223 @@ org.springframework.expression.spel.SpelEvaluationException: EL1013E: Cannot com
 2020-09-27 13:22:04.555 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
 2020-09-27 13:22:04.556 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
 2020-09-27 13:22:04.575 DEBUG 13808 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 13:24:53.792  INFO 15632 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 15632 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-09-27 13:24:53.802  INFO 15632 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-09-27 13:24:54.796  INFO 15632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-09-27 13:24:54.806  INFO 15632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-27 13:24:54.806  INFO 15632 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-09-27 13:24:54.806  INFO 15632 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-27 13:24:54.806  INFO 15632 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-27 13:24:54.806  INFO 15632 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-27 13:24:54.816  INFO 15632 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-27 13:24:54.876  INFO 15632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-27 13:24:54.876  INFO 15632 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1014 ms
+2020-09-27 13:24:56.102  INFO 15632 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-27 13:24:56.242  INFO 15632 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-27 13:24:56.405  INFO 15632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-09-27 13:24:56.407  INFO 15632 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 2.984 seconds (JVM running for 4.059)
+2020-09-27 13:26:05.337  INFO 8156 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 8156 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-09-27 13:26:05.337  INFO 8156 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-09-27 13:26:06.243  INFO 8156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-09-27 13:26:06.243  INFO 8156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-27 13:26:06.243  INFO 8156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-09-27 13:26:06.243  INFO 8156 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-27 13:26:06.243  INFO 8156 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-27 13:26:06.243  INFO 8156 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-27 13:26:06.253  INFO 8156 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-27 13:26:06.323  INFO 8156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-27 13:26:06.323  INFO 8156 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 926 ms
+2020-09-27 13:26:07.615  INFO 8156 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-27 13:26:07.665  INFO 8156 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-27 13:26:07.815  INFO 8156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-09-27 13:26:07.825  INFO 8156 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 2.868 seconds (JVM running for 3.917)
+2020-09-27 16:36:44.134  INFO 10448 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 10448 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-09-27 16:36:44.134  INFO 10448 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-09-27 16:36:45.269  INFO 10448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-09-27 16:36:45.279  INFO 10448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-27 16:36:45.279  INFO 10448 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-09-27 16:36:45.279  INFO 10448 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-27 16:36:45.279  INFO 10448 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-27 16:36:45.279  INFO 10448 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-27 16:36:45.289  INFO 10448 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-27 16:36:45.369  INFO 10448 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-27 16:36:45.369  INFO 10448 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1155 ms
+2020-09-27 16:36:46.929  INFO 10448 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-27 16:36:46.999  INFO 10448 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-27 16:36:47.169  INFO 10448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-09-27 16:36:47.179  INFO 10448 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 3.462 seconds (JVM running for 4.674)
+2020-09-27 16:36:48.540  INFO 10448 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-27 16:36:48.540  INFO 10448 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-27 16:36:48.548  INFO 10448 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-09-27 16:36:48.679  INFO 10448 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-27 16:36:49.046  INFO 10448 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-27 16:36:49.054 DEBUG 10448 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 16:36:49.081 DEBUG 10448 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 16:36:49.133 DEBUG 10448 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 16:36:49.221 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 16:36:49.221 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 16:36:49.257 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 16:36:49.258 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 16:36:49.290 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 16:36:49.298 DEBUG 10448 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-09-27 16:36:49.298 DEBUG 10448 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 4(Integer)
+2020-09-27 16:36:49.322 DEBUG 10448 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-09-27 16:47:15.143 DEBUG 10448 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 16:47:15.143 DEBUG 10448 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 16:47:15.167 DEBUG 10448 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 16:47:15.170 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 16:47:15.170 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 16:47:15.194 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 16:47:15.194 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 16:47:15.222 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 16:47:15.224 DEBUG 10448 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-09-27 16:47:15.224 DEBUG 10448 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 4(Integer)
+2020-09-27 16:47:15.248 DEBUG 10448 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-09-27 16:47:20.815 DEBUG 10448 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-09-27 16:47:20.816 DEBUG 10448 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 72eb2773-9bb4-466b-b73e-faf9d27d824a(String)
+2020-09-27 16:47:20.839 DEBUG 10448 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-09-27 16:47:20.853 DEBUG 10448 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 16:47:20.853 DEBUG 10448 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 16:47:20.877 DEBUG 10448 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 16:47:20.877 DEBUG 10448 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 16:47:20.906 DEBUG 10448 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 16:48:58.947 DEBUG 10448 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 16:48:58.947 DEBUG 10448 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 16:48:58.971 DEBUG 10448 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 16:48:58.972 DEBUG 10448 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 16:48:58.997 DEBUG 10448 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 16:49:09.778 DEBUG 10448 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 16:49:09.779 DEBUG 10448 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 16:49:09.802 DEBUG 10448 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 16:49:09.802 DEBUG 10448 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 16:49:09.828 DEBUG 10448 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 16:49:17.601 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 16:49:17.602 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 16:49:17.626 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 16:49:17.626 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 16:49:17.652 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 16:50:46.879 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 16:50:46.879 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 16:50:46.903 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 16:50:46.903 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 16:50:46.928 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 16:51:18.668 DEBUG 10448 --- [http-nio-8887-exec-5] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-09-27 16:51:18.668 DEBUG 10448 --- [http-nio-8887-exec-5] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 43(Integer)
+2020-09-27 16:51:18.692 DEBUG 10448 --- [http-nio-8887-exec-5] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-09-27 16:51:18.694 DEBUG 10448 --- [http-nio-8887-exec-5] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-09-27 16:51:18.694 DEBUG 10448 --- [http-nio-8887-exec-5] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 43(Integer)
+2020-09-27 16:51:18.740 DEBUG 10448 --- [http-nio-8887-exec-5] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-09-27 16:51:18.742 DEBUG 10448 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-09-27 16:51:18.742 DEBUG 10448 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 43(Integer)
+2020-09-27 16:51:18.765 DEBUG 10448 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-09-27 16:51:18.770 DEBUG 10448 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-09-27 16:51:18.770 DEBUG 10448 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-09-27 16:51:18.797 DEBUG 10448 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-09-27 16:51:18.799 DEBUG 10448 --- [http-nio-8887-exec-5] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-09-27 16:51:18.800 DEBUG 10448 --- [http-nio-8887-exec-5] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 43(Integer)
+2020-09-27 16:51:18.823 DEBUG 10448 --- [http-nio-8887-exec-5] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-09-27 16:51:56.755 DEBUG 10448 --- [http-nio-8887-exec-1] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-09-27 16:51:56.755 DEBUG 10448 --- [http-nio-8887-exec-1] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 43(Integer)
+2020-09-27 16:51:56.779 DEBUG 10448 --- [http-nio-8887-exec-1] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-09-27 16:51:56.781 DEBUG 10448 --- [http-nio-8887-exec-1] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-09-27 16:51:56.782 DEBUG 10448 --- [http-nio-8887-exec-1] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 43(Integer)
+2020-09-27 16:51:56.826 DEBUG 10448 --- [http-nio-8887-exec-1] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-09-27 16:51:56.827 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-09-27 16:51:56.827 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 43(Integer)
+2020-09-27 16:51:56.850 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-09-27 16:51:56.852 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-09-27 16:51:56.853 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-09-27 16:51:56.879 DEBUG 10448 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-09-27 16:51:56.881 DEBUG 10448 --- [http-nio-8887-exec-1] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-09-27 16:51:56.881 DEBUG 10448 --- [http-nio-8887-exec-1] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 43(Integer)
+2020-09-27 16:51:56.904 DEBUG 10448 --- [http-nio-8887-exec-1] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-09-27 16:52:08.291 DEBUG 10448 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 16:52:08.291 DEBUG 10448 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 16:52:08.314 DEBUG 10448 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 16:52:08.315 DEBUG 10448 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 16:52:08.346 DEBUG 10448 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 16:53:17.879 DEBUG 10448 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 16:53:17.879 DEBUG 10448 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 16:53:17.902 DEBUG 10448 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 16:53:17.903 DEBUG 10448 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 16:53:17.928 DEBUG 10448 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 16:53:50.048 DEBUG 10448 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-09-27 16:53:50.048 DEBUG 10448 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 43(Integer)
+2020-09-27 16:53:50.072 DEBUG 10448 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-09-27 16:53:50.073 DEBUG 10448 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-09-27 16:53:50.073 DEBUG 10448 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 43(Integer)
+2020-09-27 16:53:50.118 DEBUG 10448 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-09-27 16:53:50.119 DEBUG 10448 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-09-27 16:53:50.119 DEBUG 10448 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 43(Integer)
+2020-09-27 16:53:50.142 DEBUG 10448 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-09-27 16:53:50.145 DEBUG 10448 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-09-27 16:53:50.146 DEBUG 10448 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-09-27 16:53:50.172 DEBUG 10448 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-09-27 16:53:50.173 DEBUG 10448 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-09-27 16:53:50.173 DEBUG 10448 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 43(Integer)
+2020-09-27 16:53:50.195 DEBUG 10448 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-09-27 16:54:56.184 DEBUG 10448 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 16:54:56.184 DEBUG 10448 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 16:54:56.207 DEBUG 10448 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 16:54:56.208 DEBUG 10448 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 16:54:56.233 DEBUG 10448 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 16:54:59.719 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 16:54:59.719 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 16:54:59.742 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 16:54:59.742 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 16:54:59.768 DEBUG 10448 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 16:55:37.113  INFO 6196 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 6196 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-09-27 16:55:37.116  INFO 6196 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-09-27 16:55:38.050  INFO 6196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-09-27 16:55:38.056  INFO 6196 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-27 16:55:38.057  INFO 6196 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-09-27 16:55:38.058  INFO 6196 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-27 16:55:38.058  INFO 6196 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-27 16:55:38.058  INFO 6196 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-27 16:55:38.061  INFO 6196 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-27 16:55:38.133  INFO 6196 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-27 16:55:38.133  INFO 6196 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 962 ms
+2020-09-27 16:55:39.471  INFO 6196 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-27 16:55:39.511  INFO 6196 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-27 16:55:39.671  INFO 6196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-09-27 16:55:39.671  INFO 6196 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 2.934 seconds (JVM running for 4.067)
+2020-09-27 16:56:01.525  INFO 6196 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-27 16:56:01.525  INFO 6196 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-27 16:56:01.530  INFO 6196 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-09-27 16:56:01.581  INFO 6196 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-27 16:56:02.009  INFO 6196 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-27 16:56:02.019 DEBUG 6196 --- [http-nio-8887-exec-1] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-09-27 16:56:02.040 DEBUG 6196 --- [http-nio-8887-exec-1] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 43(Integer)
+2020-09-27 16:56:02.093 DEBUG 6196 --- [http-nio-8887-exec-1] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-09-27 16:56:02.098 DEBUG 6196 --- [http-nio-8887-exec-1] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-09-27 16:56:02.099 DEBUG 6196 --- [http-nio-8887-exec-1] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 43(Integer)
+2020-09-27 16:56:02.159 DEBUG 6196 --- [http-nio-8887-exec-1] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-09-27 16:56:02.160 DEBUG 6196 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-09-27 16:56:02.160 DEBUG 6196 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 43(Integer)
+2020-09-27 16:56:02.192 DEBUG 6196 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-09-27 16:56:02.228 DEBUG 6196 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-09-27 16:56:02.228 DEBUG 6196 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-09-27 16:56:02.268 DEBUG 6196 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-09-27 16:56:02.270 DEBUG 6196 --- [http-nio-8887-exec-1] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-09-27 16:56:02.270 DEBUG 6196 --- [http-nio-8887-exec-1] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 43(Integer)
+2020-09-27 16:56:02.300 DEBUG 6196 --- [http-nio-8887-exec-1] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-09-27 16:57:50.716 DEBUG 6196 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-09-27 16:57:50.716 DEBUG 6196 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-09-27 16:57:50.755 DEBUG 6196 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-09-27 16:57:50.755 DEBUG 6196 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-09-27 16:57:50.789 DEBUG 6196 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-09-27 17:02:49.907  INFO 12632 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 12632 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-09-27 17:02:49.910  INFO 12632 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-09-27 17:02:50.809  INFO 12632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-09-27 17:02:50.816  INFO 12632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-27 17:02:50.817  INFO 12632 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-09-27 17:02:50.818  INFO 12632 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-09-27 17:02:50.818  INFO 12632 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-09-27 17:02:50.818  INFO 12632 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-09-27 17:02:50.821  INFO 12632 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-09-27 17:02:50.896  INFO 12632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-27 17:02:50.896  INFO 12632 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 923 ms
+2020-09-27 17:02:52.249  INFO 12632 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-27 17:02:52.301  INFO 12632 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-27 17:02:52.451  INFO 12632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-09-27 17:02:52.453  INFO 12632 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 2.918 seconds (JVM running for 3.964)
