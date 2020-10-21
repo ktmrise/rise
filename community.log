@@ -2177,3 +2177,1160 @@ java.lang.NullPointerException: null
 2020-10-21 14:11:44.890 DEBUG 17732 --- [http-nio-80-exec-3] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
 2020-10-21 14:11:44.890 DEBUG 17732 --- [http-nio-80-exec-3] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 44(Integer)
 2020-10-21 14:11:44.921 DEBUG 17732 --- [http-nio-80-exec-3] c.k.m.C.selectCommentsByParentId         : <==      Total: 2
+2020-10-21 14:15:39.538  INFO 11976 --- [main] com.ktm.RiseCommunityApplicationTests    : Starting RiseCommunityApplicationTests on DESKTOP-1RNIUFE with PID 11976 (started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-10-21 14:15:39.548  INFO 11976 --- [main] com.ktm.RiseCommunityApplicationTests    : The following profiles are active: pro
+2020-10-21 14:15:41.906  INFO 11976 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-21 14:15:42.006  INFO 11976 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-21 14:15:42.386  INFO 11976 --- [main] com.ktm.RiseCommunityApplicationTests    : Started RiseCommunityApplicationTests in 3.187 seconds (JVM running for 4.183)
+2020-10-21 14:15:42.842  INFO 11976 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-21 14:28:38.253  INFO 13648 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 13648 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-10-21 14:28:38.263  INFO 13648 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-10-21 14:28:39.238  INFO 13648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-10-21 14:28:39.248  INFO 13648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-21 14:28:39.248  INFO 13648 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-10-21 14:28:39.248  INFO 13648 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-10-21 14:28:39.248  INFO 13648 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-10-21 14:28:39.248  INFO 13648 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-10-21 14:28:39.258  INFO 13648 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-10-21 14:28:39.338  INFO 13648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-21 14:28:39.338  INFO 13648 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1005 ms
+2020-10-21 14:28:41.130  INFO 13648 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-21 14:28:41.180  INFO 13648 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-21 14:28:41.340  INFO 13648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-10-21 14:28:41.340  INFO 13648 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 3.429 seconds (JVM running for 4.667)
+2020-10-21 14:28:43.071  INFO 13648 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-21 14:28:43.071  INFO 13648 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-21 14:28:43.077  INFO 13648 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-10-21 14:28:43.200  INFO 13648 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-21 14:28:43.610  INFO 13648 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-21 14:28:43.644 DEBUG 13648 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:28:43.664 DEBUG 13648 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:28:43.725 DEBUG 13648 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:28:43.725 DEBUG 13648 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:28:43.758 DEBUG 13648 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:30:05.310  INFO 7352 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 7352 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-10-21 14:30:05.310  INFO 7352 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-10-21 14:30:06.215  INFO 7352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-10-21 14:30:06.225  INFO 7352 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-21 14:30:06.225  INFO 7352 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-10-21 14:30:06.225  INFO 7352 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-10-21 14:30:06.225  INFO 7352 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-10-21 14:30:06.225  INFO 7352 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-10-21 14:30:06.235  INFO 7352 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-10-21 14:30:06.305  INFO 7352 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-21 14:30:06.305  INFO 7352 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 935 ms
+2020-10-21 14:30:07.987  INFO 7352 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-21 14:30:08.037  INFO 7352 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-21 14:30:08.197  INFO 7352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-10-21 14:30:08.197  INFO 7352 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 3.311 seconds (JVM running for 4.542)
+2020-10-21 14:31:58.537  INFO 7352 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-21 14:31:58.537  INFO 7352 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-21 14:31:58.541  INFO 7352 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-10-21 14:31:58.602  INFO 7352 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-21 14:31:58.902  INFO 7352 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-21 14:31:58.936 DEBUG 7352 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:31:58.953 DEBUG 7352 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:31:58.992 DEBUG 7352 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:31:58.993 DEBUG 7352 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:31:59.024 DEBUG 7352 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:32:51.479  INFO 9088 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 9088 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-10-21 14:32:51.479  INFO 9088 --- [main] com.ktm.RiseCommunityApplication         : The following profiles are active: pro
+2020-10-21 14:32:52.734  INFO 9088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-10-21 14:32:52.744  INFO 9088 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-21 14:32:52.744  INFO 9088 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-10-21 14:32:52.744  INFO 9088 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-10-21 14:32:52.744  INFO 9088 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-10-21 14:32:52.744  INFO 9088 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-10-21 14:32:52.744  INFO 9088 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-10-21 14:32:52.834  INFO 9088 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-21 14:32:52.834  INFO 9088 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1285 ms
+2020-10-21 14:32:55.070  INFO 9088 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-21 14:32:55.135  INFO 9088 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-21 14:32:55.333  INFO 9088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-10-21 14:32:55.335  INFO 9088 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 4.329 seconds (JVM running for 5.757)
+2020-10-21 14:32:56.297  INFO 9088 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-21 14:32:56.298  INFO 9088 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-21 14:32:56.305  INFO 9088 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-10-21 14:32:56.421  INFO 9088 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-21 14:32:56.741  INFO 9088 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-21 14:32:56.784 DEBUG 9088 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:32:56.804 DEBUG 9088 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:32:56.854 DEBUG 9088 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:32:56.855 DEBUG 9088 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:32:56.886 DEBUG 9088 --- [http-nio-80-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:33:49.511  INFO 15784 --- [main] com.ktm.RiseCommunityApplication         : Starting RiseCommunityApplication on DESKTOP-1RNIUFE with PID 15784 (D:\IdeaProjects\springboot-projects\rise-community\target\classes started by KTM in D:\IdeaProjects\springboot-projects\rise-community)
+2020-10-21 14:33:49.521  INFO 15784 --- [main] com.ktm.RiseCommunityApplication         : No active profile set, falling back to default profiles: default
+2020-10-21 14:33:50.447  INFO 15784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-10-21 14:33:50.457  INFO 15784 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-21 14:33:50.457  INFO 15784 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-10-21 14:33:50.457  INFO 15784 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-10-21 14:33:50.457  INFO 15784 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-10-21 14:33:50.457  INFO 15784 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-10-21 14:33:50.457  INFO 15784 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-10-21 14:33:50.567  INFO 15784 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-21 14:33:50.567  INFO 15784 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 996 ms
+2020-10-21 14:33:52.242  INFO 15784 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-21 14:33:52.292  INFO 15784 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-21 14:33:52.458  INFO 15784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-10-21 14:33:52.458  INFO 15784 --- [main] com.ktm.RiseCommunityApplication         : Started RiseCommunityApplication in 3.342 seconds (JVM running for 4.561)
+2020-10-21 14:33:53.744  INFO 15784 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-21 14:33:53.745  INFO 15784 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-21 14:33:53.755  INFO 15784 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-10-21 14:33:56.713  INFO 15784 --- [http-nio-8887-exec-1] com.ktm.provider.GithubProvider          : 4134503ec418537a0a083bb4a0eba920b5e657d5
+2020-10-21 14:33:59.347  INFO 15784 --- [http-nio-8887-exec-1] com.ktm.provider.GithubProvider          : rise
+2020-10-21 14:33:59.401  INFO 15784 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-21 14:33:59.662  INFO 15784 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-21 14:33:59.672 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (account_id = ?) 
+2020-10-21 14:33:59.698 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 60636088(Long)
+2020-10-21 14:33:59.787 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:33:59.837 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:33:59.837 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:33:59.839 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:33:59.870 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:33:59.871 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:33:59.891 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:33:59.893 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:33:59.902 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:33:59.906 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:33:59.906 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:33:59.914 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:34:00.431 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:34:00.431 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:34:00.432 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:34:00.432 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:34:00.432 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:34:00.432 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:34:00.433 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:34:00.433 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:34:00.434 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:34:00.437 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:34:00.438 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:34:00.438 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:34:00.599 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:34:00.600 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:34:00.602 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:34:00.705 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:34:00.706 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:34:00.708 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:34:00.795 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:34:00.795 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:34:00.797 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:34:00.805 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:34:00.805 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:34:00.806 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:34:11.256 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:34:11.257 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:34:11.258 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:34:11.261 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:34:11.261 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:34:11.263 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:34:11.263 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:34:11.268 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:34:11.272 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:34:11.272 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:34:11.274 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:34:16.619 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:34:16.619 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:34:16.622 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:34:16.632 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:34:16.632 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:34:16.633 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:34:16.633 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:34:16.637 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:34:26.436  INFO 15784 --- [http-nio-8887-exec-4] com.ktm.provider.GithubProvider          : 27ea8465feaa3cda7b3728941723ccaf3027282a
+2020-10-21 14:34:29.894  INFO 15784 --- [http-nio-8887-exec-4] com.ktm.provider.GithubProvider          : rise
+2020-10-21 14:34:29.897 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (account_id = ?) 
+2020-10-21 14:34:29.897 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 60636088(Long)
+2020-10-21 14:34:29.898 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:34:29.906 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:34:29.907 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:34:29.908 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:34:29.910 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:34:29.910 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:34:29.913 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:34:29.913 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:34:29.915 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:34:29.917 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:34:29.917 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:34:29.920 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:35:06.334 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:06.335 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:06.336 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:06.339 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:35:06.340 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 43(Integer)
+2020-10-21 14:35:06.342 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:35:06.343 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:35:06.343 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 43(Integer)
+2020-10-21 14:35:06.374 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:35:06.375 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:35:06.375 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 43(Integer)
+2020-10-21 14:35:06.376 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:35:06.382 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:35:06.382 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:35:06.385 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:35:06.387 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:35:06.387 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 43(Integer)
+2020-10-21 14:35:06.393 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:35:06.394 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:35:06.395 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:35:06.396 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:35:06.456 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:06.456 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:06.456 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:06.457 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:06.460 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:06.460 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:06.496 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:06.496 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:06.497 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:06.497 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:06.497 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:06.498 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:06.500 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:06.500 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:06.500 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:06.500 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:06.500 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:06.503 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:14.968 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:14.969 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:14.970 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:14.976 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:35:14.976 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:35:14.977 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:35:14.978 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:35:14.984 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:35:14.985 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:35:14.985 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:35:14.986 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:35:15.969 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:15.970 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:15.971 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:15.972 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:35:15.973 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 42(Integer)
+2020-10-21 14:35:15.975 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:35:15.976 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:35:15.977 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 42(Integer)
+2020-10-21 14:35:15.982 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:35:15.983 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:35:15.983 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 42(Integer)
+2020-10-21 14:35:15.983 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:35:15.984 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:35:15.985 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Spring Boot(String)
+2020-10-21 14:35:15.986 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 2
+2020-10-21 14:35:15.988 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:35:15.988 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 42(Integer)
+2020-10-21 14:35:15.991 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:35:15.992 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:35:15.992 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:35:15.994 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:35:17.378 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:17.378 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:17.379 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:17.382 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:35:17.383 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:35:17.385 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:35:17.386 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:35:17.388 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:35:17.389 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:35:17.390 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:35:17.390 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:35:18.233 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:18.234 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:18.234 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:18.236 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:35:18.236 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 43(Integer)
+2020-10-21 14:35:18.237 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:35:18.238 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:35:18.238 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 43(Integer)
+2020-10-21 14:35:18.246 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:35:18.247 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:35:18.247 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 43(Integer)
+2020-10-21 14:35:18.248 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:35:18.249 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:35:18.249 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:35:18.252 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:35:18.253 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:35:18.253 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 43(Integer)
+2020-10-21 14:35:18.254 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:35:18.254 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:35:18.255 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:35:18.256 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:35:20.457 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:20.458 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:20.459 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:20.461 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:35:20.461 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:35:20.463 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:35:20.464 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:35:20.466 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:35:20.467 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:35:20.468 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:35:20.469 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:35:23.754 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:23.754 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:23.755 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:23.757 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:35:23.757 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 43(Integer)
+2020-10-21 14:35:23.758 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:35:23.760 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:35:23.760 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 43(Integer)
+2020-10-21 14:35:23.765 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:35:23.765 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:35:23.766 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 43(Integer)
+2020-10-21 14:35:23.767 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:35:23.768 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:35:23.768 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:35:23.770 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:35:23.771 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:35:23.771 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 43(Integer)
+2020-10-21 14:35:23.773 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:35:23.774 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:35:23.774 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:35:23.775 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:35:23.805 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:23.806 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:23.807 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:26.640 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:26.640 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:26.641 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:26.644 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:35:26.644 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:35:26.646 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:35:26.647 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:35:26.648 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:35:26.649 DEBUG 15784 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:35:26.649 DEBUG 15784 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:35:26.650 DEBUG 15784 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:35:27.490 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:27.491 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:27.493 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:27.494 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:35:27.494 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 41(Integer)
+2020-10-21 14:35:27.495 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:35:27.496 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:35:27.496 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 41(Integer)
+2020-10-21 14:35:27.501 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:35:27.501 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:35:27.501 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 41(Integer)
+2020-10-21 14:35:27.502 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:35:27.503 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:35:27.504 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:35:27.505 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:35:27.506 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:35:27.506 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 41(Integer)
+2020-10-21 14:35:27.507 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:35:27.508 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:35:27.508 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:35:27.510 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:35:29.729 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:29.730 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:29.731 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:29.734 DEBUG 15784 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:35:29.735 DEBUG 15784 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:35:29.737 DEBUG 15784 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:35:29.737 DEBUG 15784 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:35:29.739 DEBUG 15784 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:35:29.740 DEBUG 15784 --- [http-nio-8887-exec-4] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:35:29.741 DEBUG 15784 --- [http-nio-8887-exec-4] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:35:29.743 DEBUG 15784 --- [http-nio-8887-exec-4] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:35:30.562 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:30.562 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:30.563 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:30.565 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:35:30.565 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 43(Integer)
+2020-10-21 14:35:30.566 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:35:30.566 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:35:30.567 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 43(Integer)
+2020-10-21 14:35:30.573 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:35:30.574 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:35:30.574 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 43(Integer)
+2020-10-21 14:35:30.574 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:35:30.575 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:35:30.575 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:35:30.577 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:35:30.577 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:35:30.578 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 43(Integer)
+2020-10-21 14:35:30.578 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:35:30.579 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:35:30.579 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:35:30.579 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:35:42.488 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:35:42.489 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:35:42.490 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:35:42.492 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:35:42.492 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:35:42.494 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:35:42.495 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:35:42.496 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:35:42.497 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:35:42.497 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:35:42.498 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:36:39.301 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:36:39.301 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:36:39.302 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:36:39.304 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:36:39.305 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:36:39.306 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:36:39.306 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:36:39.308 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:36:39.309 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:36:39.309 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:36:39.310 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:37:32.948 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:37:32.948 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:37:32.949 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:37:32.951 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:37:32.952 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 43(Integer)
+2020-10-21 14:37:32.953 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:37:32.954 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:37:32.954 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 43(Integer)
+2020-10-21 14:37:32.960 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:37:32.961 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:37:32.961 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 43(Integer)
+2020-10-21 14:37:32.962 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:37:32.963 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:37:32.964 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:37:32.965 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:37:32.966 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:37:32.966 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 43(Integer)
+2020-10-21 14:37:32.967 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:37:32.968 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:37:32.968 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:37:32.970 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:37:33.010 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:37:33.010 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:37:33.011 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:37:59.658 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:37:59.658 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:37:59.659 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:37:59.667 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:37:59.667 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:37:59.668 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:37:59.668 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:37:59.669 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:38:01.497 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:38:01.497 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 43(Integer)
+2020-10-21 14:38:01.498 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:38:01.499 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:38:01.499 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 43(Integer)
+2020-10-21 14:38:01.505 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:38:01.506 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:38:01.506 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 43(Integer)
+2020-10-21 14:38:01.507 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:38:01.508 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:38:01.508 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:38:01.510 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:38:01.510 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:38:01.510 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 43(Integer)
+2020-10-21 14:38:01.511 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:38:03.904 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:38:03.904 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:38:03.905 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:38:03.906 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:38:03.908 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:38:04.879 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:38:04.880 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 42(Integer)
+2020-10-21 14:38:04.881 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:38:04.882 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:38:04.882 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 42(Integer)
+2020-10-21 14:38:04.890 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:38:04.891 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:38:04.891 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 42(Integer)
+2020-10-21 14:38:04.892 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:38:04.893 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:38:04.893 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Spring Boot(String)
+2020-10-21 14:38:04.893 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 2
+2020-10-21 14:38:04.894 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:38:04.894 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 42(Integer)
+2020-10-21 14:38:04.895 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:38:10.665 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:38:10.665 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:38:10.667 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:38:10.667 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:38:10.669 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:38:11.672 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:38:11.673 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 41(Integer)
+2020-10-21 14:38:11.674 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:38:11.675 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:38:11.675 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 41(Integer)
+2020-10-21 14:38:11.681 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:38:11.681 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:38:11.682 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 41(Integer)
+2020-10-21 14:38:11.683 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:38:11.684 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:38:11.684 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:38:11.685 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:38:11.686 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:38:11.686 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 41(Integer)
+2020-10-21 14:38:11.686 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:38:14.362 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:38:14.362 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:38:14.364 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:38:14.364 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:38:14.366 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:38:15.328 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:38:15.329 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 38(Integer)
+2020-10-21 14:38:15.329 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:38:15.330 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:38:15.331 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 38(Integer)
+2020-10-21 14:38:15.337 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:38:15.337 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:38:15.338 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 38(Integer)
+2020-10-21 14:38:15.339 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:38:15.340 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:38:15.340 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:38:15.341 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:38:15.342 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:38:15.343 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 38(Integer)
+2020-10-21 14:38:15.344 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.C.selectCommentsByParentId         : <==      Total: 3
+2020-10-21 14:38:18.575 DEBUG 15784 --- [http-nio-8887-exec-4] c.k.m.C.selectTwoCommentsByParentId      : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=2 and c.parent_id =? order by c.id desc 
+2020-10-21 14:38:18.575 DEBUG 15784 --- [http-nio-8887-exec-4] c.k.m.C.selectTwoCommentsByParentId      : ==> Parameters: 68(Integer)
+2020-10-21 14:38:18.577 DEBUG 15784 --- [http-nio-8887-exec-4] c.k.m.C.selectTwoCommentsByParentId      : <==      Total: 0
+2020-10-21 14:38:24.199  INFO 15784 --- [http-nio-8887-exec-3] com.ktm.provider.GithubProvider          : 9f8fc0637dcb4b1e82f8e60600334c5c801ec032
+2020-10-21 14:38:25.772  INFO 15784 --- [http-nio-8887-exec-3] com.ktm.provider.GithubProvider          : rise
+2020-10-21 14:38:25.774 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (account_id = ?) 
+2020-10-21 14:38:25.774 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 60636088(Long)
+2020-10-21 14:38:25.775 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:38:25.782 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:38:25.782 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:38:25.784 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:38:25.786 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:38:25.786 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:38:25.787 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:38:25.787 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:38:25.788 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:38:25.789 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:38:25.790 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:38:25.790 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:38:43.815 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:38:43.815 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:38:43.816 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:38:43.820 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.CommentMapper.selectById  : ==>  Preparing: SELECT id,parent_id,type,commentator,create_time,modified_time,like_count,content,comment_count FROM comment WHERE id=? 
+2020-10-21 14:38:43.821 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.CommentMapper.selectById  : ==> Parameters: 68(Integer)
+2020-10-21 14:38:43.821 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.CommentMapper.selectById  : <==      Total: 1
+2020-10-21 14:38:43.823 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.CommentMapper.insert      : ==>  Preparing: INSERT INTO comment ( parent_id, type, commentator, create_time, modified_time, content ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2020-10-21 14:38:43.825 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.CommentMapper.insert      : ==> Parameters: 68(Integer), 2(Integer), 3(Integer), 2020-10-21(LocalDate), 2020-10-21(LocalDate), fdfdf(String)
+2020-10-21 14:38:43.868 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.CommentMapper.insert      : <==    Updates: 1
+2020-10-21 14:38:43.870 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.CommentMapper.addCommentCount      : ==>  Preparing: update comment set comment_count=comment_count+1 where id=? 
+2020-10-21 14:38:43.870 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.CommentMapper.addCommentCount      : ==> Parameters: 68(Integer)
+2020-10-21 14:38:43.876 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.CommentMapper.addCommentCount      : <==    Updates: 1
+2020-10-21 14:38:43.877 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectById     : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE id=? 
+2020-10-21 14:38:43.877 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectById     : ==> Parameters: 3(Integer)
+2020-10-21 14:38:43.878 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectById     : <==      Total: 1
+2020-10-21 14:38:43.878 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.CommentMapper.selectById  : ==>  Preparing: SELECT id,parent_id,type,commentator,create_time,modified_time,like_count,content,comment_count FROM comment WHERE id=? 
+2020-10-21 14:38:43.878 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.CommentMapper.selectById  : ==> Parameters: 68(Integer)
+2020-10-21 14:38:43.879 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.CommentMapper.selectById  : <==      Total: 1
+2020-10-21 14:38:43.880 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.NotificationMapper.insert   : ==>  Preparing: INSERT INTO notification ( notifier, receiver, outer_id, type, create_time, notifier_name, outer_title ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2020-10-21 14:38:43.881 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.NotificationMapper.insert   : ==> Parameters: 3(Integer), 4(Integer), 38(Integer), 0(Integer), 2020-10-21(LocalDate), rise(String), jfdskfks(String)
+2020-10-21 14:38:43.887 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.NotificationMapper.insert   : <==    Updates: 1
+2020-10-21 14:38:43.897 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:38:43.897 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:38:43.898 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:38:43.899 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:38:43.899 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 38(Integer)
+2020-10-21 14:38:43.900 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:38:43.900 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:38:43.901 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 38(Integer)
+2020-10-21 14:38:43.905 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:38:43.905 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:38:43.905 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 38(Integer)
+2020-10-21 14:38:43.906 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:38:43.907 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:38:43.907 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:38:43.908 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:38:43.908 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:38:43.909 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 38(Integer)
+2020-10-21 14:38:43.909 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.C.selectCommentsByParentId         : <==      Total: 3
+2020-10-21 14:38:43.909 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:38:43.910 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:38:43.911 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:38:43.948 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:38:43.949 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:38:43.950 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:38:45.591 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:38:45.591 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:38:45.592 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:38:45.592 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectTwoCommentsByParentId      : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=2 and c.parent_id =? order by c.id desc 
+2020-10-21 14:38:45.593 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectTwoCommentsByParentId      : ==> Parameters: 68(Integer)
+2020-10-21 14:38:45.594 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectTwoCommentsByParentId      : <==      Total: 1
+2020-10-21 14:38:46.420 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:38:46.420 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:38:46.421 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:38:46.422 DEBUG 15784 --- [http-nio-8887-exec-1] c.k.m.C.selectTwoCommentsByParentId      : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=2 and c.parent_id =? order by c.id desc 
+2020-10-21 14:38:46.422 DEBUG 15784 --- [http-nio-8887-exec-1] c.k.m.C.selectTwoCommentsByParentId      : ==> Parameters: 68(Integer)
+2020-10-21 14:38:46.423 DEBUG 15784 --- [http-nio-8887-exec-1] c.k.m.C.selectTwoCommentsByParentId      : <==      Total: 1
+2020-10-21 14:39:58.616 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:39:58.616 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:39:58.617 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:39:58.618 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:39:58.618 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 38(Integer)
+2020-10-21 14:39:58.619 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:39:58.620 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:39:58.621 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 38(Integer)
+2020-10-21 14:39:58.662 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:39:58.663 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:39:58.664 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 38(Integer)
+2020-10-21 14:39:58.665 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:39:58.666 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:39:58.666 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:39:58.667 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:39:58.668 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:39:58.668 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 38(Integer)
+2020-10-21 14:39:58.670 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : <==      Total: 3
+2020-10-21 14:39:58.671 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:39:58.671 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:39:58.672 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:39:58.723 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:39:58.723 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:39:58.724 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:40:01.324 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:40:01.324 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:40:01.325 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:40:01.326 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:40:01.326 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 9(Integer)
+2020-10-21 14:40:01.327 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:40:01.328 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:40:01.328 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 9(Integer)
+2020-10-21 14:40:01.336 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:40:01.337 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:40:01.337 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 9(Integer)
+2020-10-21 14:40:01.338 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:40:01.340 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:40:01.340 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: java(String)
+2020-10-21 14:40:01.342 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:40:01.343 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:40:01.343 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 9(Integer)
+2020-10-21 14:40:01.344 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:40:01.345 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:40:01.345 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:40:01.345 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:40:41.587 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:40:41.587 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:40:41.588 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:40:41.589 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:40:41.589 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 9(Integer)
+2020-10-21 14:40:41.590 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:40:41.590 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:40:41.590 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 9(Integer)
+2020-10-21 14:40:41.597 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:40:41.597 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:40:41.597 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 9(Integer)
+2020-10-21 14:40:41.598 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:40:41.599 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:40:41.600 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: java(String)
+2020-10-21 14:40:41.601 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:40:41.602 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:40:41.602 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 9(Integer)
+2020-10-21 14:40:41.602 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:40:41.603 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:40:41.603 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:40:41.604 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:40:41.642 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:40:41.643 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:40:41.643 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:41:04.500 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:41:04.500 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:41:04.500 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:41:04.501 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:41:04.501 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:41:04.501 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:29.799 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:29.799 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:29.800 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:29.801 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:42:29.801 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 9(Integer)
+2020-10-21 14:42:29.802 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:42:29.802 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:42:29.802 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 9(Integer)
+2020-10-21 14:42:29.810 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:42:29.811 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:42:29.811 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 9(Integer)
+2020-10-21 14:42:29.812 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:42:29.813 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:42:29.813 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: java(String)
+2020-10-21 14:42:29.814 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:42:29.814 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:42:29.815 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 9(Integer)
+2020-10-21 14:42:29.815 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:42:29.816 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:42:29.816 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:42:29.817 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:42:29.863 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:29.863 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:29.863 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:29.863 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:29.864 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:29.864 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:29.866 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:29.866 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:29.866 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:29.866 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:29.866 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:29.866 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:29.867 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:29.869 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:29.870 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:29.903 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:29.903 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:29.904 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:29.906 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:29.906 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:29.907 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:29.954 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:29.954 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:29.954 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:29.954 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:29.954 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:29.954 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:29.955 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:29.955 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:29.955 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:29.987 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:29.988 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:29.988 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:30.024 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:30.025 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:30.025 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:30.025 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:30.025 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:30.026 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:30.103 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:30.103 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:30.104 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:39.993 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:39.993 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:42:39.993 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:39.993 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:42:39.994 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:42:39.994 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.400 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.400 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.403 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.404 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:43:29.404 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 9(Integer)
+2020-10-21 14:43:29.405 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:43:29.405 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:43:29.405 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 9(Integer)
+2020-10-21 14:43:29.413 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:43:29.413 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:43:29.414 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 9(Integer)
+2020-10-21 14:43:29.415 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:43:29.416 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:43:29.417 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: java(String)
+2020-10-21 14:43:29.418 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:43:29.419 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:43:29.419 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 9(Integer)
+2020-10-21 14:43:29.420 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:43:29.420 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:43:29.421 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:43:29.421 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:43:29.464 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.465 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.466 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.474 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.474 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.475 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.475 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.475 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.475 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.475 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.475 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.475 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.475 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.475 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.476 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.511 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.511 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.511 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.511 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.512 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.512 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.557 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.557 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.557 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.557 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.557 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.557 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.558 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.558 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.558 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.587 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.587 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.588 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.616 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.616 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.616 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.616 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.617 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.617 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:29.699 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:29.700 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:29.700 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:37.682 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:37.682 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:37.682 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:37.682 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:37.683 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:37.683 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.407 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.407 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.408 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.410 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:43:48.410 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 9(Integer)
+2020-10-21 14:43:48.411 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:43:48.412 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:43:48.412 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 9(Integer)
+2020-10-21 14:43:48.420 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:43:48.421 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:43:48.421 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 9(Integer)
+2020-10-21 14:43:48.422 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:43:48.423 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:43:48.424 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: java(String)
+2020-10-21 14:43:48.425 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:43:48.426 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:43:48.426 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 9(Integer)
+2020-10-21 14:43:48.427 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:43:48.428 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:43:48.428 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:43:48.429 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:43:48.520 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.520 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.520 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.521 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.521 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.521 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.521 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.521 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.521 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.522 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.522 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.523 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.523 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.523 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.524 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.641 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.642 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.642 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.643 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.643 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.643 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.644 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.644 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.645 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.647 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.647 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.648 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.648 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.648 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.648 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.676 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.677 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.677 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.743 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.743 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.744 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.755 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.755 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.756 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:43:48.860 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:43:48.860 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:43:48.861 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:44:24.195 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:44:24.195 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:44:24.196 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:44:24.196 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:44:24.197 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:44:24.197 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.112 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.112 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.114 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.115 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:45:02.115 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 9(Integer)
+2020-10-21 14:45:02.116 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:45:02.116 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:45:02.116 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 9(Integer)
+2020-10-21 14:45:02.122 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:45:02.123 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:45:02.123 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 9(Integer)
+2020-10-21 14:45:02.124 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:45:02.126 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:45:02.126 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: java(String)
+2020-10-21 14:45:02.128 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:45:02.129 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:45:02.129 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 9(Integer)
+2020-10-21 14:45:02.130 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:45:02.131 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:45:02.131 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:45:02.131 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:45:02.198 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.199 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.199 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.199 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.200 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.200 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.201 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.201 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.201 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.201 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.201 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.201 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.202 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.202 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.202 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.250 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.250 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.251 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.251 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.251 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.252 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.298 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.298 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.299 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.301 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.301 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.302 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.304 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.304 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.305 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.328 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.329 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.330 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.360 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.360 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.360 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.360 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.361 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.361 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:02.449 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:02.450 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:02.450 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:09.246 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:09.246 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:09.247 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:09.247 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:09.247 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:09.247 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:31.910 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:31.911 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:31.912 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:31.913 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:45:31.913 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 9(Integer)
+2020-10-21 14:45:31.914 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:45:31.915 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:45:31.915 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 9(Integer)
+2020-10-21 14:45:31.921 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:45:31.922 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:45:31.922 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 9(Integer)
+2020-10-21 14:45:31.922 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:45:31.923 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:45:31.924 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: java(String)
+2020-10-21 14:45:31.925 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:45:31.925 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:45:31.925 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 9(Integer)
+2020-10-21 14:45:31.926 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:45:31.926 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:45:31.926 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:45:31.927 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:45:31.974 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:31.975 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:31.975 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:31.975 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:31.976 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:31.976 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:31.984 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:31.984 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:31.984 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:31.984 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:31.984 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:31.984 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:31.985 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:31.985 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:31.985 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:32.025 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:32.025 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:32.025 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:32.025 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:32.026 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:32.026 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:32.060 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:32.061 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:32.062 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:32.062 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:32.062 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:32.062 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:32.063 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:32.063 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:32.063 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:32.090 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:32.091 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:32.092 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:32.119 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:32.119 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:32.119 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:32.119 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:32.120 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:32.120 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:45:32.198 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:45:32.198 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:45:32.199 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:46:08.596 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:46:08.596 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:46:08.597 DEBUG 15784 --- [http-nio-8887-exec-2] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:46:08.600 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:46:08.600 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:46:08.601 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:46:08.602 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:46:08.604 DEBUG 15784 --- [http-nio-8887-exec-2] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:46:08.605 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:46:08.605 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:46:08.606 DEBUG 15784 --- [http-nio-8887-exec-2] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:46:09.504 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:46:09.505 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:46:09.506 DEBUG 15784 --- [http-nio-8887-exec-5] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:46:09.507 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:46:09.508 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 42(Integer)
+2020-10-21 14:46:09.509 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:46:09.509 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:46:09.509 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 42(Integer)
+2020-10-21 14:46:09.520 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:46:09.520 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:46:09.520 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 42(Integer)
+2020-10-21 14:46:09.521 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:46:09.522 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:46:09.522 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Spring Boot(String)
+2020-10-21 14:46:09.523 DEBUG 15784 --- [http-nio-8887-exec-5] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 2
+2020-10-21 14:46:09.524 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:46:09.524 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 42(Integer)
+2020-10-21 14:46:09.524 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:46:09.524 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:46:09.524 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:46:09.525 DEBUG 15784 --- [http-nio-8887-exec-5] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:46:11.711 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:46:11.711 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:46:11.712 DEBUG 15784 --- [http-nio-8887-exec-4] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:46:11.714 DEBUG 15784 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:46:11.714 DEBUG 15784 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:46:11.715 DEBUG 15784 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:46:11.715 DEBUG 15784 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:46:11.717 DEBUG 15784 --- [http-nio-8887-exec-4] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:46:11.718 DEBUG 15784 --- [http-nio-8887-exec-4] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:46:11.719 DEBUG 15784 --- [http-nio-8887-exec-4] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:46:11.719 DEBUG 15784 --- [http-nio-8887-exec-4] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:46:12.952 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:46:12.952 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:46:12.953 DEBUG 15784 --- [http-nio-8887-exec-10] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:46:12.954 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:46:12.955 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 41(Integer)
+2020-10-21 14:46:12.956 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:46:12.957 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:46:12.958 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 41(Integer)
+2020-10-21 14:46:12.966 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:46:12.966 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:46:12.966 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 41(Integer)
+2020-10-21 14:46:12.967 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:46:12.968 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:46:12.968 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:46:12.969 DEBUG 15784 --- [http-nio-8887-exec-10] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:46:12.969 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:46:12.969 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 41(Integer)
+2020-10-21 14:46:12.970 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.C.selectCommentsByParentId         : <==      Total: 0
+2020-10-21 14:46:12.971 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:46:12.971 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:46:12.972 DEBUG 15784 --- [http-nio-8887-exec-10] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:46:16.873 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:46:16.873 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:46:16.874 DEBUG 15784 --- [http-nio-8887-exec-8] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:46:16.875 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:46:16.875 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:46:16.877 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:46:16.877 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:46:16.878 DEBUG 15784 --- [http-nio-8887-exec-8] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:46:16.880 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:46:16.880 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:46:16.881 DEBUG 15784 --- [http-nio-8887-exec-8] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:46:18.214 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:46:18.215 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:46:18.215 DEBUG 15784 --- [http-nio-8887-exec-9] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:46:18.216 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:46:18.217 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 38(Integer)
+2020-10-21 14:46:18.217 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:46:18.218 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:46:18.218 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 38(Integer)
+2020-10-21 14:46:18.226 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:46:18.226 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:46:18.226 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 38(Integer)
+2020-10-21 14:46:18.227 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:46:18.227 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:46:18.228 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:46:18.228 DEBUG 15784 --- [http-nio-8887-exec-9] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:46:18.229 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:46:18.229 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 38(Integer)
+2020-10-21 14:46:18.230 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.C.selectCommentsByParentId         : <==      Total: 3
+2020-10-21 14:46:18.231 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:46:18.231 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:46:18.232 DEBUG 15784 --- [http-nio-8887-exec-9] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:46:20.600 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:46:20.600 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:46:20.601 DEBUG 15784 --- [http-nio-8887-exec-6] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:46:20.603 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:46:20.603 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:46:20.604 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:46:20.604 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:46:20.606 DEBUG 15784 --- [http-nio-8887-exec-6] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:46:20.607 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:46:20.607 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:46:20.608 DEBUG 15784 --- [http-nio-8887-exec-6] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:46:21.704 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:46:21.704 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:46:21.705 DEBUG 15784 --- [http-nio-8887-exec-7] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:46:21.706 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:46:21.706 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 37(Integer)
+2020-10-21 14:46:21.708 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:46:21.708 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:46:21.708 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 37(Integer)
+2020-10-21 14:46:21.716 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:46:21.716 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:46:21.716 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 37(Integer)
+2020-10-21 14:46:21.717 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:46:21.717 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:46:21.718 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:46:21.718 DEBUG 15784 --- [http-nio-8887-exec-7] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:46:21.719 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:46:21.719 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 37(Integer)
+2020-10-21 14:46:21.719 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.C.selectCommentsByParentId         : <==      Total: 1
+2020-10-21 14:46:21.720 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:46:21.721 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:46:21.721 DEBUG 15784 --- [http-nio-8887-exec-7] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:46:24.398 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:46:24.398 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:46:24.399 DEBUG 15784 --- [http-nio-8887-exec-3] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:46:24.400 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.QuestionMapper.selectQuestionById  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id where q.id=? 
+2020-10-21 14:46:24.400 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.QuestionMapper.selectQuestionById  : ==> Parameters: 38(Integer)
+2020-10-21 14:46:24.401 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.QuestionMapper.selectQuestionById  : <==      Total: 1
+2020-10-21 14:46:24.401 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.mapper.QuestionMapper.addViewCount   : ==>  Preparing: update question set view_count=view_count+1 where id=? 
+2020-10-21 14:46:24.401 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.mapper.QuestionMapper.addViewCount   : ==> Parameters: 38(Integer)
+2020-10-21 14:46:24.409 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.mapper.QuestionMapper.addViewCount   : <==    Updates: 1
+2020-10-21 14:46:24.410 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectById   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE id=? 
+2020-10-21 14:46:24.410 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectById   : ==> Parameters: 38(Integer)
+2020-10-21 14:46:24.411 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectById   : <==      Total: 1
+2020-10-21 14:46:24.412 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectList   : ==>  Preparing: SELECT id,title,description,create_time,modified_time,creator,comment_count,view_count,like_count,tag FROM question WHERE (tag = ?) 
+2020-10-21 14:46:24.412 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectList   : ==> Parameters: Java(String)
+2020-10-21 14:46:24.413 DEBUG 15784 --- [http-nio-8887-exec-3] c.ktm.mapper.QuestionMapper.selectList   : <==      Total: 27
+2020-10-21 14:46:24.413 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.C.selectCommentsByParentId         : ==>  Preparing: select c.*, u.name as authorName, u.avatar_url as authorAvatarUrl from comment c join user u on c.commentator = u.id where c.type=1 and c.parent_id =? order by c.id desc 
+2020-10-21 14:46:24.413 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.C.selectCommentsByParentId         : ==> Parameters: 38(Integer)
+2020-10-21 14:46:24.414 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.C.selectCommentsByParentId         : <==      Total: 3
+2020-10-21 14:46:24.415 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:46:24.415 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:46:24.416 DEBUG 15784 --- [http-nio-8887-exec-3] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
+2020-10-21 14:46:27.992 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==>  Preparing: SELECT id,account_id,name,create_time,modified_time,token,bio,avatar_url FROM user WHERE (token = ?) 
+2020-10-21 14:46:27.992 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : ==> Parameters: 65b19414-7e57-4e4a-8e2a-1479e9e9faf2(String)
+2020-10-21 14:46:27.993 DEBUG 15784 --- [http-nio-8887-exec-1] com.ktm.mapper.UserMapper.selectOne      : <==      Total: 1
+2020-10-21 14:46:27.994 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: SELECT COUNT(1) FROM question q JOIN user u ON q.creator = u.id 
+2020-10-21 14:46:27.994 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 
+2020-10-21 14:46:27.995 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==>  Preparing: select q.*, u.name as authorName, u.avatar_url as avatarUrl from question q join user u on q.creator = u.id order by q.id desc LIMIT ?,? 
+2020-10-21 14:46:27.996 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : ==> Parameters: 0(Long), 7(Long)
+2020-10-21 14:46:27.998 DEBUG 15784 --- [http-nio-8887-exec-1] c.ktm.mapper.QuestionMapper.selectPages  : <==      Total: 7
+2020-10-21 14:46:27.999 DEBUG 15784 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : ==>  Preparing: select notifier_name as notifierName, type,id, status, outer_title as titleOrContent, outer_id as outerId from notification WHERE (status = ? AND receiver = ?) 
+2020-10-21 14:46:27.999 DEBUG 15784 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : ==> Parameters: 0(Integer), 3(Integer)
+2020-10-21 14:46:27.999 DEBUG 15784 --- [http-nio-8887-exec-1] c.k.m.N.selectUnreadNotifications        : <==      Total: 0
