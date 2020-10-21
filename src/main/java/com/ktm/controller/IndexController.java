@@ -31,7 +31,7 @@ public class IndexController extends BaseController {
     private INotificationService notificationService;
 
 
-    @GetMapping("/")
+    @GetMapping({"/","/index"})
     public String index(HttpServletRequest request,
                         @RequestParam(name = "current", defaultValue = "1") int current,
                         @RequestParam(name = "size", defaultValue = "7", required = false) int size,

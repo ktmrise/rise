@@ -10,7 +10,7 @@ public class RiseCommunityApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(RiseCommunityApplication.class, args);
-        System.out.println("http://localhost:8887/index");
+        System.out.println("http://localhost");
     }
 
 }

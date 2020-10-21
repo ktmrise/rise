@@ -143,7 +143,9 @@
                 <!--回复框------------------------------------------->
                 <!--回复框------------------------------------------->
                 <!--回复框------------------------------------------->
-                <div id="reply-template">
+                <div class="alert alert-success" role="alert" th:if="${session.user==null}" style="text-align: center">   <span style="font-size: 16px" >想评论问题请先登录</span></div>
+
+                <div id="reply-template" th:if="${session.user!=null}">
                     <h4 style="font-weight: bold">提交回复</h4>
                     <hr>
                     <div class="form-group" style="margin-top: 20px">
@@ -151,12 +153,12 @@
                             <div class="media">
                                 <div class="media-left">
                                     <a href="">
-                                        <img class="media-object" th:src="${question.avatarUrl}" alt="" width="60px">
+                                        <img class="media-object" th:src="${session.user.avatarUrl}" alt="" width="60px">
                                     </a>
                                 </div>
                                 <div class="media-body" style="line-height: 60px;font-size: 16px;font-weight: 400">
 
-                                    <span th:text="${question.authorName}"></span>
+                                    <span th:text="${session.user.name}"></span>
 
                                 </div>
                             </div>
