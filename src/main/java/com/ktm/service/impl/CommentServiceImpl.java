@@ -97,14 +97,12 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
             notification.setOuterTitle(dbComment.getContent());
             notification.setOuterId(dbComment.getParentId());
         }
-        notification.setType(NotificationStatusEnum.UNREAD.getStatus())
+        notification.setStatus(NotificationStatusEnum.UNREAD.getStatus())
                 .setCreateTime(LocalDate.now())
-
                 .setNotifier(comment.getCommentator())
                 .setType(type)
                 .setReceiver(receiver)
                 .setNotifierName(user.getName());
-
         notificationMapper.insert(notification);
     }
 

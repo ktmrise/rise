@@ -77,7 +77,6 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
     public List<Question> selectRelatedQuestions(Integer id) {
         Question dbQuestion = questionMapper.selectById(id);
         QueryWrapper<Question> queryWrapper;
-
         String dbQuestionTag = dbQuestion.getTag();
         if (dbQuestionTag.contains(",")) {
             String[] tags = dbQuestion.getTag().split(",");
@@ -89,15 +88,10 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
                     queryWrapper.or();
                 }
                 count++;
-
             }
         } else {
             return questionMapper.selectList(new LambdaQueryWrapper<Question>().eq(Question::getTag, dbQuestionTag));
         }
-
-
         return questionMapper.selectList(queryWrapper);
     }
-
-
 }

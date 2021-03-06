@@ -18,38 +18,24 @@ public class BaseController {
         return pages.contains(1);
     }
 
-    protected List<Integer> selectPages(int current, long totalPages) {
-        List<Integer> pageList = new ArrayList<>();
-        if (current <= 3) {
-            for (int i = 1; i <=Math.min(3 + current,totalPages) ; i++) {
-                pageList.add(i);
-            }
-            return pageList;
+    private static List<Integer> list(int cur, long total) {
+        List<Integer> res = new ArrayList<>();
+        //左边部分
+        for (int i = 3; i >= 1; i--) {
+            int j = cur - i;
+            if (j >= 1) res.add(j);
         }
-
-        if (current < totalPages - 3) {
-            for (int i = current - 3; i <= current + 3; i++) {
-                pageList.add(i);
-            }
-            return pageList;
+        res.add(cur);
+        //右边部分
+        for (int i = 1; i <= 3; i++) {
+            int j = cur + i;
+            if (j <= total) res.add(j);
         }
-
-        if (current >= totalPages - 6) {
-            for (int i = current; i < totalPages - 3; i++) {
-                pageList.add(i);
-            }
-            for (int i = (int) (totalPages - 3); i <= totalPages; i++) {
-                pageList.add(i);
-            }
-            return pageList;
-        }
-
-        return pageList;
-
+        return res;
     }
 
     protected void pageData(HttpServletRequest request, int current, IPage<QuestionDTO> result) {
-        List<Integer> pages = selectPages(current, result.getPages());
+        List<Integer> pages = list(current, result.getPages());
 
         //是否包含第一页
         boolean isContainFirst = isContainFirst(pages);

@@ -56,7 +56,6 @@ public class PublishController {
     public String publishByQuestionId(@RequestParam(name = "questionId") Integer id, HttpServletRequest request) {
         request.setAttribute("tags", TagsCache.getTagDTO());
         Question question = questionService.getById(id);
-
         request.setAttribute("question", question);
         request.setAttribute("tags", TagsCache.getTagDTO());
         return "publish";

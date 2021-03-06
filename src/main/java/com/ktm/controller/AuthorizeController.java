@@ -26,9 +26,6 @@ import java.util.UUID;
 public class AuthorizeController {
 
 
-    private static int count;
-
-
     @Value("${client_id}")
     String client_id;
 
@@ -48,10 +45,9 @@ public class AuthorizeController {
     @GetMapping("/callback")
     public String callback(@RequestParam(name = "code") String code,
                            @RequestParam(name = "state") String state,
-                            HttpServletResponse response) {
+                           HttpServletResponse response) {
         AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
         accessTokenDTO.setClient_id(client_id).setClient_secret(client_secret).setCode(code).setState(state).setRedirect_uri(redirect_uri);
-
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
         GithubUser githubUser = githubProvider.getGithubUser(accessToken);
         if (githubUser != null) {
@@ -69,31 +65,16 @@ public class AuthorizeController {
                 userService.save(user);
                 response.addCookie(new Cookie("token", token));
             } else {
-                if (!dbUser.getBio().equals(githubUser.getBio())) {
+                if (!dbUser.getBio().equals(githubUser.getBio()) || !dbUser.getAvatarUrl().equals(githubUser.getAvatar_url()) || !dbUser.getName().equals(githubUser.getName())) {
                     dbUser.setBio(githubUser.getBio());
-                    count++;
-                }
-                if (!dbUser.getAvatarUrl().equals(githubUser.getAvatar_url())) {
                     dbUser.setAvatarUrl(githubUser.getAvatar_url());
-                    count++;
-                }
-                if (!dbUser.getName().equals(githubUser.getName())) {
                     dbUser.setName(githubUser.getName());
-                    count++;
-                }
-                if (count != 0) {
                     dbUser.setModifiedTime(LocalDate.now());
                     userService.update(dbUser, null);
-                    count = 0;
                 }
-
                 response.addCookie(new Cookie("token", dbUser.getToken()));
             }
-
-
         }
         return "redirect:/index";
-
     }
-
 }

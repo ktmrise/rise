@@ -46,7 +46,6 @@ public class ProfileController extends BaseController {
         } else if ("replies".equals(action)) {
             request.setAttribute("section", "replies");
             request.setAttribute("sectionName", "最新回复");
-
             List<NotificationDTO> unreadNotifications;
             //查找未读通知
             if (user!=null) {
@@ -54,11 +53,7 @@ public class ProfileController extends BaseController {
                 request.setAttribute("unreadCount",unreadNotifications.size());
                 request.setAttribute("unreadNotifications",unreadNotifications);
             }
-
-
         }
-
-
         return "profile";
     }
 
